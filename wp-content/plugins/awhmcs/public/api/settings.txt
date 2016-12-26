@@ -1,1 +1,0 @@
-http://localhost/whmcs/includes/api.php,admin,123456,
