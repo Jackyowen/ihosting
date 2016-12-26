@@ -279,13 +279,19 @@ jQuery(document).ready(function ($) {
     });
 
     //ACORDION
-    $(".ts-accordion").each(function () {
-        var $this       = $(this);
-        var $tab_active = parseInt($this.attr('data-tab-active'));
+    $(".ts-acordion-data").each(function() {
+        var $this = $(this);
+        var icon_header = $(this).attr('data-icon-header');
+        var icon_active_header = $(this).attr('data-active');
+        var active_tab = $(this).attr('data-tab');
+        var icons = {
+            header: "fa "+icon_header,
+            activeHeader: "fa "+icon_active_header,
+        };
         $(this).accordion({
-            active : $tab_active,
-            header : ".vc_tta-panel-heading",
-            collapsible : true
+            icons: icons,
+            active:0,
+            collapsible: true
         });
     });
 

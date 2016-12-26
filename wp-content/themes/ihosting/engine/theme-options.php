@@ -261,6 +261,30 @@ if ( !class_exists( 'TheOne_Redux_Framework_config' ) ) {
 
 					),
 					array(
+						'id'       => 'opt_main_menu_break_point',
+						'type'     => 'text',
+						'title'    => esc_html__( 'Main Menu Break Point', 'ihosting' ),
+						'desc'     => esc_html__( 'Enter the screen width (in pixel) that main menu will switch to mobile style. Default 991.', 'ihosting' ),
+						'default'  => 991,
+						'validate' => 'numeric',
+					),
+					array(
+						'id'       => 'opt_vertical_menu_break_point',
+						'type'     => 'text',
+						'title'    => esc_html__( 'Vertical Menu Break Point', 'ihosting' ),
+						'desc'     => esc_html__( 'Enter the screen width (in pixel) that vertical menu will switch to mobile style. Default 991.', 'ihosting' ),
+						'default'  => 991,
+						'validate' => 'numeric',
+					),
+					array(
+						'id'      => 'opt_enable_main_menu_sticky',
+						'type'    => 'switch',
+						'title'   => esc_html__( 'Enable Main Menu Sticky', 'ihosting' ),
+						'default' => '1',
+						'on'      => esc_html__( 'Enable', 'ihosting' ),
+						'off'     => esc_html__( 'Disable', 'ihosting' ),
+					),
+					array(
 						'id'       => 'opt_general_accent_color',
 						'type'     => 'color_rgba',
 						'title'    => esc_html__( 'Base color', 'ihosting' ),

@@ -16,6 +16,7 @@ if ( !defined( 'ABSPATH' ) ) {
 define( 'IHOSTINGCORE_VERSION', '1.1' );
 define( 'IHOSTINGCORE_BASE_URL', trailingslashit( plugins_url( 'ihosting-core' ) ) );
 define( 'IHOSTINGCORE_DIR_PATH', plugin_dir_path( __FILE__ ) );
+define( 'XSHOPCORE_INC', IHOSTINGCORE_DIR_PATH . '/includes/' );
 define( 'IHOSTINGCORE_LIBS', IHOSTINGCORE_DIR_PATH . '/libs/' );
 define( 'IHOSTINGCORE_LIBS_URL', IHOSTINGCORE_BASE_URL . '/libs/' );
 define( 'IHOSTINGCORE_CORE', IHOSTINGCORE_DIR_PATH . '/core/' );
@@ -47,6 +48,13 @@ if ( file_exists( IHOSTINGCORE_LIBS . 'init.php' ) ) {
 	require_once IHOSTINGCORE_LIBS . 'init.php';
 }
 
+/**
+ * Load js_composer
+ */
+if (file_exists(XSHOPCORE_INC . 'init.php')) {
+    require_once XSHOPCORE_INC . 'init.php';
+
+}
 /**
  * Load One Click Import Demo Data
  */

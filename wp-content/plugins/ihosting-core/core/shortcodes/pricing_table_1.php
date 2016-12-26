@@ -46,6 +46,17 @@ function ihPricingTable1() {
 					'param_name' => 'short_desc',
 					'std'        => esc_html__( 'Great plan for Small Business', 'ihosting-core' ),
 				),
+                array(
+                    'type'       => 'dropdown',
+                    'class'      => '',
+                    'heading'    => esc_html__( 'Style Hover box:', 'ihosting-core' ),
+                    'param_name' => 'style_hover',
+                    'value'      => array(
+                        esc_html__( 'Style 1', 'ihosting-core' )    => 'box-1',
+                        esc_html__( 'Style 2', 'ihosting-core' )    => 'box-2',
+                    ),
+                    'std'        => 'box-1'
+                ),
 				array(
 					'type'       => 'textfield',
 					'holder'     => 'div',
@@ -250,6 +261,7 @@ function ih_pricing_table_1( $atts ) {
 				'css_animation'           => '',
 				'animation_delay'         => '0.4',   //In second
 				'css'                     => '',
+                'style_hover'             => ''
 			), $atts
 		)
 	);
@@ -359,7 +371,7 @@ function ih_pricing_table_1( $atts ) {
 
 	$html .= '<div class="' . esc_attr( $css_class ) . '" data-wow-delay="' . esc_attr( $animation_delay ) . '">
 					<div class="ih-pricing-table-content">
-						<div class="ih-pricing-table-1 pricing-table-inner">
+						<div class="ih-pricing-table-1 pricing-table-inner '.esc_attr($style_hover).'">
 							' . $title_html . '
 							' . $short_desc_html . '
 							' . $price_html . '

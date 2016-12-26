@@ -1,3 +1,114 @@
 /* Theme custom css */
+.box-1:hover {
+    border: 1px solid #fcb100 !important;
+}
+.box-2:hover::before {
+    border-color: #fcb100 #dddddd #dddddd;
+    border-style: solid;
+    border-width: 4px 1px 1px;
+    bottom: -1px;
+    content: "";
+    left: -1px;
+    position: absolute;
+    right: -1px;
+    top: 0;
+}
+/* ----------------------------------- accordion ---------------------------------------*/
+.toggle-head.ui-accordion-header-active::before {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #004486;
+    bottom: -10px;
+    left: 24px;
+    content: "";
+    position: absolute;
+}
+.toggle-head.ui-accordion-header-active, .toggle-head:hover {
+    background: #004486 none repeat scroll 0 0;
+    border-color: #004486;
+    position: relative;
+    color: #ffffff;
+}
+.toggle-head.ui-accordion-header-active .ui-accordion-header-icon, .toggle-head:hover .ui-accordion-header-icon {
+    color: #ffffff;
+}
+/* ----------------------------------- accordion ---------------------------------------*/
+
+.header-bottom-right .menu .menu-item {
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+    border: none !important;
+}
+.header-bottom-right .menu .menu-item .caret {
+    right: -20px !important;
+    top: 23px;
+    left: auto !important;
+}
+.zmb-wrap .zmb-menu .menu-item-has-children .zmb-dropdown-toggle .caret {
+    right: 0;
+    top: 23px;
+    left: auto;
+}
+.header-bottom-right .sub-menu .menu-item {
+    text-align: left;
+    margin: 0;
+}
+.header-bottom-right {
+    -webkit-transition: padding 0.3s ease 0s;
+    -moz-transition: padding 0.3s ease 0s;
+    -ms-transition: padding 0.3s ease 0s;
+    -o-transition: padding 0.3s ease 0s;
+    transition: padding 0.3s ease 0s;
+    display: inline-block;
+    float: right;
+}
+.header-bottom-right .menu .menu-item a {
+    font-size: 16px;
+    position: relative;
+}
+.zmb-sticky-menu-wrap .zmb-sticky-menu-inner {
+    background-color: rgba(255,255,255,0.9) !important;
+}
+.zmb-sticky-menu-wrap .zmb-sticky-menu-inner .zmb-menu-wrap-sticky {
+    background: transparent !important;
+    margin-bottom: -8px;
+}
+
+
+/*=============================== home 2 ===================================*/
+
+.toggle-head:first-child {
+    margin: 0;
+}
+.toggle-head {
+    background: #f7f7f7 none repeat scroll 0 0;
+    border: 1px solid #dddddd;
+    color: #666666;
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 53px;
+    margin-top: 10px;
+    padding-left: 25px;
+    cursor: pointer;
+}
+.ui-accordion-header-icon {
+    color: #004486;
+    font-size: 20px;
+    margin-right: 20px;
+}
+.ui-accordion-content-active {
+    display: block !important;
+}
+.acordion-content.ui-accordion-content-active .acc-inner-content {
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin: 20px 0 10px;
+    padding: 10px 0 45px 25px;
+}
+/*=============================== home 3 ===================================*/
+.ih-pricing-table-1-wrap .ih-pricing-table-1 {
+    background-color: #fff;
+}
 
 /*# sourceMappingURL=custom.css.map */

@@ -1,7 +1,7 @@
 @media (min-width: 1200px) {
   .container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -168,36 +168,6 @@
     }
   }
 
-}
-
-.zmb-sticky-menu-wrap {
-  .zmb-sticky-menu-inner {
-    background-color: #fff;
-    .zmb-menu-wrap-sticky {
-      width: 100%;
-      float: left;
-      position: relative;
-    }
-  }
-}
-
-.zmb-wrap {
-  .zmb-menu > li.zmb-cart .zmb-cart-icon {
-    line-height: 18px;
-  }
-}
-
-.zmb-wrap {
-  .zmb-menu {
-    > li  {
-      > a {
-        text-transform: none;
-      }
-    }
-    .menu-item-has-children .dropdown-toggle .caret {
-      display: none;
-    }
-  }
 }
 
 .main-menu, .icon-cart, .icon-search {

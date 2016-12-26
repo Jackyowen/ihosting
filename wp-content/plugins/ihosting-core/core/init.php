@@ -47,7 +47,7 @@ endif;
  * Load custom taxonomies
  */
 
-$taxonomiesArgs = array();
+$taxonomiesArgs = array('brand');
 if ( is_array( $taxonomiesArgs ) && !empty( $taxonomiesArgs ) ):
 	foreach ( $taxonomiesArgs as $taxonomy ):
 		$taxonomy = sanitize_key( $taxonomy );
@@ -77,7 +77,7 @@ endif;
 /**
  * Load Taxonomies metaboxes
  */
-$taxonomyMetaboxesArgs = array( 'pa_color' );
+$taxonomyMetaboxesArgs = array( 'pa_color','brand' );
 if ( is_array( $taxonomyMetaboxesArgs ) && !empty( $taxonomyMetaboxesArgs ) ):
 	foreach ( $taxonomyMetaboxesArgs as $taxonomy ):
 		$taxonomy = sanitize_key( $taxonomy );

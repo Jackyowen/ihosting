@@ -226,7 +226,7 @@ function ih_imgs_carousel( $atts ) {
 	$space_between_items = str_replace( 'px', '', $space_between_items );
 	$carousel_attrs = 'data-number="' . esc_attr( $items_per_slide ) . '" data-loop="' . esc_attr( $loop ) . '" data-navControl="yes" data-Dots="no" data-autoPlay="' . $autoplay . '" data-autoPlayTimeout="' . esc_attr( $slider_speed ) . '" data-margin="' . intval( $space_between_items ) . '" data-rtl="no"';
 
-	$carousel_html = '<div class="ih-imgs-carousel ihosting-owl-carousel nav-center nav-style-2" ' . $carousel_attrs . '>
+	$carousel_html = '<div class="logo-slide ih-imgs-carousel ihosting-owl-carousel nav-center nav-style-2" ' . $carousel_attrs . '>
 						' . $carousel_html . '
 					</div>';
 

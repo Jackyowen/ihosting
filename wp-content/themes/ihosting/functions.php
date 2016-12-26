@@ -59,8 +59,6 @@ if ( !function_exists( 'ihosting_setup' ) ) :
 			array(
 				'primary'                              => esc_html__( 'Primary Menu', 'ihosting' ),
 				'footer_menu'                          => esc_html__( 'Footer Menu', 'ihosting' ),
-				'small_menu_for_header_layout_style_5' => esc_html__( 'Small Menu For Header Layout Style 5', 'ihosting' ),
-				'vertical_menu_for_header'             => esc_html__( 'Vertical Menu For Header Layout Style 2, 5, 7', 'ihosting' ),
 			)
 		);
 
@@ -401,6 +399,46 @@ if ( !function_exists( 'ihosting_admin_enqueue_js' ) ) {
 	}
 
 	add_action( 'admin_enqueue_scripts', 'ihosting_admin_enqueue_js' );
+}
+
+if ( !function_exists( 'ihosting_menu_breakpoint' ) ) {
+	function ihosting_menu_breakpoint() {
+		global $ihosting;
+
+		// Set breakpoint main menu
+		$breakpoint_main_menu = isset( $ihosting['opt_main_menu_break_point'] ) ? max( 1, intval( $ihosting['opt_main_menu_break_point'] ) ) : 991;
+		$breakpoint_vertical_menu = isset( $ihosting['opt_vertical_menu_break_point'] ) ? max( 1, intval( $ihosting['opt_vertical_menu_break_point'] ) ) : 991;
+
+		$custom_css = '@media (max-width: ' . esc_attr( $breakpoint_main_menu ) . 'px) {
+						  .mobile-navigation {
+						    display: block;
+						    float: left;
+						  }
+						  #primary-navigation {
+						    display: none;
+						  }
+						  #primary-menu-clone-wrap {
+						    display: none;
+						  }
+						}
+						@media (max-width: ' . esc_attr( $breakpoint_vertical_menu ) . 'px) {
+						  .vertical-menu-wrap {
+						    display: none !important;
+						  }
+						  .toggle-vertical-menu {
+						    display: none !important;
+						  }
+						  .toggle-vertical-menu-mobile {
+						    display: block !important;
+						    overflow: hidden;
+						  }
+						}';
+
+		wp_add_inline_style( 'ihosting-custom-style', $custom_css );
+
+	}
+
+	add_action( 'wp_enqueue_scripts', 'ihosting_menu_breakpoint', 21 );
 }
 
 

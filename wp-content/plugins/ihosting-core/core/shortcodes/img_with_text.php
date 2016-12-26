@@ -233,7 +233,7 @@ function ih_img_with_text( $atts ) {
 	$img_size_x = isset( $img_size[0] ) ? max( 0, intval( $img_size[0] ) ) : $img_size_x;
 	$img_size_y = isset( $img_size[1] ) ? max( 0, intval( $img_size[1] ) ) : $img_size_y;
 
-	$img = ihosting_core_resize_image( $img_id, null, $img_size_x, $img_size_y, true, true, false );
+	$img = zmb_resize_image( $img_id, null, $img_size_x, $img_size_y, true, true, false );
 
 	$img_wrap_class = 'img-wrap';
 	if ( $img_circle == 'yes' ) {
