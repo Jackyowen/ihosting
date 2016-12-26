@@ -1,0 +1,135 @@
+<section id="main-body" class="container">
+
+    <div class="row">
+
+        <div class="col-md-3 pull-md-left sidebar" layout="column" ng-include="project.left"></div>
+
+                <!-- Container for main page display content -->
+
+        <div class="col-md-9 pull-md-right main-content">
+
+            <div class="header-lined">
+
+                <breadcrumbs breadcrumbs="breadcrumbs"></breadcrumbs>
+
+                <div class="header-title">
+
+                    <h1>My Support Tickets</h1>
+
+                    <select name="status" class="form-control input-sm status" ng-model="selectedstatus" ng-change="hasChanged()">
+
+                        <option value="Open">Open ({{countopen.length}})</option>
+
+                        <option value="Answered">Answered ({{countanswered.length}})</option>
+
+                        <option value="Customer-Reply">Customer-Reply ({{countcustomer.length}})</option>
+
+                        <option value="Closed">Closed ({{countclosed.length}})</option>
+
+                        <option value="">All ({{ticketspl.length}})</option>
+
+                    </select>
+
+                </div>
+
+            </div> 
+
+            <div class="table-container clearfix">
+
+                <div id="tableTicketsList_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+
+                    <div class="listtable"><div id="tableTicketsList_filter" class="dataTables_filter">
+
+                        <label>
+
+                            <input type="search" class="form-control input-sm" ng-model="ticketssearch" placeholder="Enter search term..." aria-controls="tableTicketsList">
+
+                        </label>
+
+                        <div class="dataTables_length" id="tableInvoicesList_length">
+
+                            <label>Show 
+
+                                <select name="tableInvoicesList_length" aria-controls="tableInvoicesList" class="form-control input-sm" ng-model="selected" ng-change="hasChanged()">
+
+                                    <option value="10">10</option>
+
+                                    <option value="25">25</option>
+
+                                    <option value="50">50</option>
+
+                                    <option value="{{total}}">All</option>
+
+                                </select> entries
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <table id="tableTicketsList" class="table table-list dataTable no-footer dtr-inline responsive-table" aria-describedby="tableTicketsList_info" role="grid">
+
+                        <thead>
+
+                            <tr role="row"><th class="sorting" tabindex="0" aria-controls="tableTicketsList" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 0px;">Department</th>
+
+                            <th class="sorting" tabindex="0" aria-controls="tableTicketsList" rowspan="1" colspan="1" aria-label="Subject: activate to sort column ascending" style="width: 0px;">Subject</th>
+
+                            <th class="sorting" tabindex="0" aria-controls="tableTicketsList" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 0px;">Status</th>
+
+                            <th class="sorting_desc" tabindex="0" aria-controls="tableTicketsList" rowspan="1" colspan="1" aria-label="Last Updated: activate to sort column ascending" style="width: 0px;" aria-sort="descending">Last Updated</th>
+
+                        </tr>
+
+                        </thead>
+
+                        <tbody> 
+
+                            <tr role="row" ng-click="goPage(ticket.id)" class="odd" ng-repeat = "ticket in tickets | filter: ticketssearch">
+
+                	            <td data-label="Department">{{departnames(ticket.deptid)}}</td>
+
+                	            <td data-label="Subject"><a ng-click="goPage(ticket.id)">#{{ticket.tid}} - {{ticket.subject}}</a></td>
+
+                	            <td data-label="Status">{{ticket.status}}</td>
+
+                	            <td data-label="Last Updated" class="sorting_1"><span class="hidden">{{ticket.lastreply}}</span>{{ticket.lastreply}}</td>
+
+                	        </tr>
+
+                            <tr ng-show="!tickets.length"><td valign="top" colspan="5" class="dataTables_empty">No Records Found</td></tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="footer-lined">
+
+                    <div class="dataTables_info" id="tableTicketsList_info" role="status" aria-live="polite">Showing 1 to {{tickets.length}} of {{tickets.length}} entries</div>
+
+                </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+        </div><!-- /.main-content -->
+
+
+
+            </div>
+
+    <div class="clearfix"></div>
+
+</section>

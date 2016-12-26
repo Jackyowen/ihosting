@@ -1,0 +1,107 @@
+.banner-page {
+  padding: 90px 0;
+  color: #fff;
+  .ihosting-title-page {
+    display: inline-block;
+    float: left;
+    font-size: 36px;
+  }
+  .ihosting-breadcrumb-page {
+    float: right;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
+//end .banner-page
+
+
+.icon-center {
+  text-align: center;
+}
+.icon-box-style-2 {
+  .icon-box-name {
+    color: #222;
+    font-size: 48px;
+    font-weight: bold;
+  }
+  .icon-box-desc {
+    font-size: 16px;
+  }
+  .icon-box-name {
+    display: inline-block;
+  }
+  span {
+    color: #333;
+    font-size: 48px;
+    font-weight: bold;
+  }
+}
+
+.lobal-provider{
+  padding: 75px 0 0;
+  .container .row {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 30px;
+  }.container .row {
+     border-bottom: 1px solid #ddd;
+     padding-bottom: 30px;
+   }
+}
+
+.awesome-people {
+  margin: 75px 0;
+}
+.awesome-box {
+  border: 1px solid #ddd;
+  @include border_radius(5px);
+  margin-bottom: 30px;
+  padding: 10px;
+  .awesome-box-content {
+    margin-left: -15px;
+    padding-top: 40px;
+  }
+  .awesome-name {
+    color: #333;
+    font-size: 18px;
+  }
+  .awesome-imployee {
+    color: #888;
+    font-size: 14px;
+    margin: 0 0 5px;
+  }
+  .awesome-detail {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .awesome-list-icon li {
+    display: inline-block;
+    margin-right: 6px;
+
+    a {
+      color: #fff;
+      font-size:15px;
+      height: 30px;
+      line-height: 30px;
+      width: 30px;
+      text-align: center;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    &.awesome-icon:hover a {
+      background-color: $base-color-y;
+    }
+  }
+  .icon-facebook a {
+    background-color: #3b5998;
+  }
+  .icon-twitter a {
+    background-color: #1da1f2;
+  }
+  .icon-linkedin a {
+    background-color: #0077b5;
+  }
+}
+.deign-help {
+  background-image: url("../../assets/images/bg-feature.jpg");
+  padding: 75px 0;
+}

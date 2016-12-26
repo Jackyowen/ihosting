@@ -1,0 +1,20 @@
+#bridge {
+  .navbar-main {
+    background-color: #f1f1f1;
+    @include border_radius(0);
+    .navbar-nav {
+      > li {
+        > a {
+          color: #333;
+          padding: 15px 0 15px 25px;
+          &:before {
+            font-family: FontAwesome;
+          }
+          &:hover {
+            color: $base-color-b;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.sidebar {
+  .widget {
+    margin-bottom: 55px;
+    .widget-title {
+      font-size: 20px;
+      margin-bottom: 25px;
+      line-height: 25px;
+    }
+    ul {
+      > li {
+        line-height: 15px;
+        padding: 0 0 15px 15px;
+        position: relative;
+        a {
+          font-size: 14px;
+        }
+        span {
+          color: #aaa;
+        }
+        &:before {
+          content: "\f105";
+          font-family: 'FontAwesome';
+          left: 0;
+          position: absolute;
+          color: $base-color-y;
+          top: 0;
+        }
+        &:last-child {
+          margin-bottom: 0 !important;
+          padding-bottom: 0 !important;
+        }
+      }
+      &.woof_list {
+        > li {
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+    select {
+      width: 100%;
+      line-height: 22px;
+      padding: 10px 15px;
+    }
+    .tagcloud {
+      a {
+        color: #aaa;
+        border: 1px solid #aaa;
+        padding: 7px 10px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        &:hover {
+          color: #fff;
+          background-color: $base-color-y;
+          border-color: $base-color-y;
+        }
+      }
+    }
+  }
+}
+
+/* Products Filter range */
+.woof {
+  .widget_price_filter {
+    .price_slider_wrapper {
+      .ui-widget-content {
+        background: none repeat scroll 0 0 #ddd;
+      }
+    }
+    .ui-slider {
+      .ui-slider-range {
+        background-color: $base-color-y;
+      }
+      .ui-slider-handle {
+        width: 14px;
+        height: 14px;
+        top: -5px;
+        background-color: $base-color-y;
+        border-color: $base-color-y;
+      }
+    }
+    .ui-slider-horizontal {
+      height: 4px;
+    }
+    .price_slider_amount {
+      font-size: 0.9em;
+    }
+  }
+}
+
+.woof_container {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 45px;
+  padding-bottom:0;
+  h4 {
+    font-size: 20px !important;
+    margin-bottom: 25px !important;
+    line-height: 25px;
+  }
+}

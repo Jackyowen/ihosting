@@ -1,0 +1,33 @@
+/*             login         */
+.form-login {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  margin-bottom: 80px;
+  padding-bottom: 45px;
+  margin-top: 60px;
+  h3 {
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 35px;
+    text-align: center;
+  }
+  .contact {
+    padding: 30px 35px;
+    .button-get-start {
+      text-align: center;
+      width: 122px;
+    }
+  }
+  .remember-fogot input {
+    margin-right: 8px;
+    width: auto;
+  }
+  .remember {
+    color: #333;
+    display: inline-block;
+  }
+  .remember-fogot a {
+    float: right;
+  }
+}
+/* -------------------- */

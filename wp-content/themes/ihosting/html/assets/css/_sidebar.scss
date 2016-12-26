@@ -1,0 +1,189 @@
+.sidebar-right {
+  float: right;
+}
+//sidebar-blog
+.sidebar-blog {
+  font-size: 14px;
+  line-height: 20px;
+}
+.sidebar > div {
+  margin-bottom: 55px;
+}
+.sidebar-title {
+  margin-bottom: 25px;
+}
+.sidebar-search{
+  position: relative;
+  input {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #aaa;
+    font-size: 14px;
+    line-height: 38px;
+    padding: 0 50px 0 17px;
+    width: 100%;
+    color: #333;
+  }
+  .sidebar-search-button {
+    background: transparent none repeat scroll 0 0;
+    border: medium none;
+    line-height: 37px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+  }
+}
+.categoties-item {
+  line-height: 15px;
+  padding: 0 0 15px 15px;
+  position: relative;
+  &::before {
+    content: "\f105";
+    font-family: FontAwesome;
+    left: 0;
+    position: absolute;
+    color: $base-color-y;
+    top: 0;
+  }
+  a {
+    color: #666666;
+    font-size: 14px;
+    span {
+      color: #aaa;
+      margin-left: 5px;
+    }
+    &:hover {
+      color: $base-color-b;
+    }
+  }
+  &:last-child {
+    padding: 0 0 0 15px;
+  }
+}
+.latest-post-item {
+  display: inline-block;
+  margin-bottom: 30px;
+  min-height: 105px;
+  padding-left: 115px;
+  position: relative;
+  width: 100%;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  a {
+    display: inline-block;
+    float: left;
+    left: 0;
+    margin: 0 15px 0 0;
+    position: absolute;
+    top: 0;
+  }
+  .latest-text {
+    color: #555;
+    margin-bottom: 10px;
+  }
+  a.latest-text {
+    position: inherit;
+    &:hover {
+      color: $base-color-b;
+    }
+  }
+  .latest-date {
+    color: #888;
+    font-size: 13px;
+    i {
+      color: #666;
+      font-size: 14px;
+      margin-right: 5px;
+    }
+  }
+}
+.sidebar-quote {
+  .icon-quote-sidebar {
+    background-color: $base-color-y;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-family: "Georgia";
+    font-size: 48px;
+    height: 45px;
+    line-height: 68px;  
+    text-align: center;
+    width: 45px;
+    margin-top: 5px;
+  }
+  .quote-text {
+    margin: 5px 0 0;
+  }
+}
+.tags-list-item {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  a {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    color: #888;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 38px;
+    padding: 0 15px;
+    &:hover {
+      color: #fff;
+      border-color: $base-color-y;
+      background-color: $base-color-y;
+    }
+  }
+}
+//end sidebar blog
+.price-filter {
+  display: inline-block;
+  width: 100%;
+}
+#slider-range {
+  background-color: #dbdbdb;
+  border: medium none;
+  height: 3px;
+  div:first-child {
+    background-color: #dbdbdb;
+  }
+  div:last-child {
+    background-color: #afafaf;
+  }
+  .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background-color: $base-color-y;
+    border-color: $base-color-y;
+    border-radius: 50%;
+    height: 13px;
+    width: 13px;
+  }
+  span span {
+    color: #666;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: lighter;
+    position: absolute;
+    top: -25px;
+    @include transform_translateX(-50%);
+  }
+}
+.ui-slider-horizontal .ui-slider-range {
+  height: 3px;
+}
+.brand-checkbox label {
+  color: #666;
+  font-weight: 400;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  span {
+    color: #aaa;
+    margin-left: 3px;
+  }
+}
+.brand-checkbox > input {
+  cursor: pointer;
+}
+//end sidebar categories
+
+
+

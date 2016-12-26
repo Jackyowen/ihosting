@@ -1,0 +1,100 @@
+<div class="row martop-30 client">
+    <div class="col-md-3 pull-md-left sidebar" layout="column" ng-include="project.left"></div>    
+    <div class="col-md-9 pull-md-right main-content" layout="column">
+	    <breadcrumbs breadcrumbs="breadcrumbs"></breadcrumbs>
+	    <div class="header-title">
+	    	<h2>Dashboard</h2>
+	    </div>
+	    <div class="message" ng-class="{ hide: project.stats.numdueinvoices == 0 }">
+	    	<div class="danger">
+	    		<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+	    		<a href="#/masspay" class="content-message" >You have {{project.stats.numdueinvoices}} overdue invoice(s) with a total balance due of {{subtotal | number:2 | currency }}</a>
+	    		<a href="#/masspay" class="remove"><i class="fa fa-times" aria-hidden="true"></i></a>
+	    	</div>
+	    </div>
+		<div class="row odti">
+				<div class="col-md-3">
+					<div class="item services">
+						<a href="#/services">
+							<div class="icon "><i class="fa fa-star" aria-hidden="true"></i></div>
+							<div class="number"><h5>Services</h5><span>{{project.stats.productsnumactive}}</span></div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="item domains">
+						<a href="#/domains">
+							<div class="icon "><i class="fa fa-paper-plane" aria-hidden="true"></i></div>
+							<div class="number"><h5>Domains</h5><span>{{project.stats.numactivedomains}}</span></div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="item ticket">
+						<a href="#/tickets">
+							<div class="icon "><i class="fa fa-weixin" aria-hidden="true"></i></div>
+							<div class="number"><h5>Ticket</h5><span>{{project.stats.numtickets}}</span></div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="item invoices">
+						<a href="#/myinvoices">
+							<div class="icon"><i class="fa fa-wpforms" aria-hidden="true"></i></div>
+							<div class="number"><h5>Invoices</h5><span>{{project.stats.numdueinvoices}}</span></div>
+						</a>
+					</div>
+				</div>
+		</div>
+		
+		<div class="row sdomainchecker">
+			<div class="col-md-12">
+				<h4>Domain checker</h4>
+				<domain-checker template-url="pages/blocks/domainchecker.html"></domain-checker>
+				<p>Now you can register 30+ cool new domain extensions like .photography, .gallery, .clothing, .plumbing etc.</p>
+			</div>
+		</div>
+
+		<div class="row service-support">
+			<div class="col-md-6 active-service">
+				<div class="title-header">
+					<h3>Your Active Services</h3>
+					<a href="#/services">View All</a>
+				</div>	
+				<ul>
+					<li ng-repeat="service in services">
+						<a href="#/services/id/{{service.id}}">
+							<h5>{{service.groupname}}</h5>
+							<p>Domain: {{service.domain}}</p>
+						</a>
+
+					</li>
+				</ul>		
+				<p ng-show="!services.length">It appears you do not have any products/services with us yet. <a href="#/cart">Place an order to get started</a>.</p>		
+			</div>
+			<div class="col-md-6 support">
+				<div class="title-header">
+					<h3>Recent Support Tickets</h3>
+					<a href="#/tickets">View All</a>
+				</div>
+				<ul>
+					<li ng-repeat="ticket in tickets">
+						<a href="#/ticket/id/{{ticket.id}}">
+							<h5>{{ticket.subject}}</h5>
+							<p>Last Updated: {{ticket.lastreply}}</p>
+						</a>
+					</li>
+				</ul>
+				<p ng-show="!tickets.length">No Recent Tickets Found. If you need any help, please <a href="#/submitticket">open a ticket</a>.</p>
+
+			</div>
+		</div>
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $('.remove').click(function(){
+        	$(this).parent().hide();
+        });
+    })
+</script>

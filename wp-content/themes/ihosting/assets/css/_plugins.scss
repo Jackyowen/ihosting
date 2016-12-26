@@ -1,0 +1,40 @@
+.zan-dc-wrap {
+  form {
+    height: 62px;
+  }
+  .zan-dc-input-wrap {
+    padding-right: 178px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    .zan-dc-input {
+      width: 100% !important;
+      padding: 17px 20px !important;
+      height: 62px !important;
+      line-height: 25px;
+      border: 1px solid #aaa;
+    }
+    .zan-dc-submit-btn {
+      color: $base-color-b;
+      background-color: $base-color-y;
+      border: none !important;
+      line-height: 25px;
+      font-size: 18px;
+      font-weight: 700;
+      max-width: 170px;
+      height: 62px !important;
+      padding: 18px 35px;
+      border-radius: 3px;
+      position: absolute !important;
+      right: 0 !important;
+      .zan-dc-btn-icon {
+        float: right !important;
+        margin-left: 7px !important;
+        &:before {
+          content: "\f101";
+          font-family: "FontAwesome";
+        }
+      }
+    }
+  }
+}

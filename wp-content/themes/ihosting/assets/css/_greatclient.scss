@@ -1,0 +1,145 @@
+.great-logo {
+  background-image: url("../../assets/images/bg-client.jpg");
+  background-size: cover;
+}
+
+.great-client {
+  padding: 70px 0;
+}
+
+.client-box {
+  border: 1px solid #ddd;
+  @include border_radius(3px);
+  padding: 40px 20px;
+}
+
+.desc-client {
+  color: #888;
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.title-client {
+  color: #222;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.rate-client {
+  display: inline-block;
+  height: 15px;
+  position: relative;
+  width: 70px;
+  margin-bottom: 3px;
+  span {
+    height: 15px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    &:before {
+      color: $base-color-y;
+      content: "\f005\f005\f005\f005\f005";
+      font-family: "FontAwesome";
+      line-height: 17px;
+      font-size: 13px;
+      letter-spacing: 2px;
+      position: absolute;
+      z-index: 2;
+      overflow: hidden;
+    }
+  }
+}
+
+.rate-client:after {
+  content: "\f005\f005\f005\f005\f005";
+  font-family: "FontAwesome";
+  line-height: 17px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  position: absolute;
+  color: #ddd;
+  z-index: 1;
+}
+
+.client-box {
+  border: 1px solid #ddd;
+  @include border_radius(3px);
+  padding: 35px 20px;
+  position: relative;
+  background-color: #fff;
+  &::before {
+    background-color: #fff;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    bottom: -12px;
+    content: "";
+    display: inline-block;
+    height: 23px;
+    left: 80px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 23px;
+    z-index: 4;
+  }
+  .desc-client > span {
+    color: #ddd;
+    font-family: "Georgia";
+    font-size: 60px;
+    letter-spacing: -4px;
+    line-height: 0;
+  }
+}
+
+.client-box.has-border {
+  border: 1px solid $base-color-y;
+  &::before {
+    border-color: $base-color-y;
+  }
+}
+
+.under-box-client {
+  display: inline-block;
+  margin-left: 30px;
+  margin-top: 25px;
+  text-align: center;
+  p {
+    color: #222;
+    font-weight: bold;
+    margin: 0;
+  }
+  span {
+    color: #888;
+    font-size: 14px;
+  }
+}
+
+.logo-slide {
+  padding: 0 45px;
+  margin-bottom: 80px;
+  margin-top: 25px;
+  .owl-prev {
+    font-size: 60px;
+    left: 0;
+    position: absolute;
+    top: 8px;
+  }
+  .owl-next {
+    font-size: 60px;
+    right: 0;
+    position: absolute;
+    top: 8px;
+  }
+  .owl-nav div {
+    display: none !important;
+    color: #e0e0e0;
+    &:hover {
+      color: #666;
+    }
+  }
+  &:hover .owl-nav div {
+    display: block !important;
+  }
+}

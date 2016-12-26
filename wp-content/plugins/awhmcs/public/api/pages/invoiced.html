@@ -1,0 +1,141 @@
+<div class="container-fluid invoice-container" id="invoice-container">       
+    <div class="row">
+        <div class="col-sm-7">
+            <img ng-show="logo" src="{{logo}}" title="{{companyname}}">
+            <h2 ng-hide="logo" >{{companyname}}</h2>
+            <h3 class="ng-binding" style="margin-top: 20px;">Invoice #{{invoiced.invoiceid}}</h3>
+        </div>
+        <div class="col-sm-5 text-center">
+            <div class="invoice-status">
+                <span class="{{invoiced.status | lowercase}}">{{invoiced.status}}</span>
+                <div ng-bind-html="invoiced.paymentform"></div>
+            </div>
+            <div class="small-text">
+                Due Date: {{invoiced.duedate}}
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-6">
+            <strong>Invoiced To:</strong>
+            <address class="small-text">
+                {{client.companyname}}<br>{{client.firstname}} {{client.lastname}}<br>
+                {{client.address1}}, {{client.address2}}<br>
+                {{client.city}}, {{client.state}}, {{client.postcode}}<br>
+                {{client.countrycode}}
+            </address>
+        </div>	            
+        <div class="col-sm-6">
+            <strong>Pay To:</strong>
+            <address class="small-text">
+                {{payto}}
+            </address>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <strong>Payment Method:</strong><br>
+            <strong>{{invoiced.paymentmethod}}</strong>
+<!--
+            <select name="gateway" ng-model="gateway" class="form-control select-inline">
+                <option value="">Select Payment Method</option>
+                <option ng-repeat="payment in invoiced.payments.paymentmethods.paymentmethod" value="{{payment.module}}">{{payment.displayname}}</option>
+            </select>
+-->
+        </div>
+        <div class="col-sm-6 text-right-sm">
+            <strong>Invoice Date:</strong><br>
+            <span class="small-text">
+                {{invoiced.date}}<br><br>
+            </span>
+        </div>
+    </div>
+    <br>           
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><strong>Invoice Items</strong></h3>
+        </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <td><strong>Description</strong></td>
+                            <td width="20%" class="text-center"><strong>Amount</strong></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in invoiced.items.item">
+                            <td>{{item.description}}</td>
+                            <td class="text-center">{{item.amount | currency}}</td>
+                        </tr>
+                        <tr>
+                       		<td class="total-row text-right"><strong>Sub Total</strong></td>
+					   		<td class="total-row text-center">{{invoiced.subtotal | currency}}</td>
+                    	</tr>
+                        <tr>
+                        	<td class="total-row text-right"><strong>Credit</strong></td>
+							<td class="total-row text-center">{{invoiced.tax  | currency}}</td>
+                    	</tr>
+                        <tr>
+                            <td class="total-row text-right"><strong>Total</strong></td>
+                            <td class="total-row text-center">{{invoiced.total | currency}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="transactions-container small-text">
+        <div class="table-responsive">
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <td class="text-center"><strong>Transaction Date</strong></td>
+                        <td class="text-center"><strong>Gateway</strong></td>
+                        <td class="text-center"><strong>Transaction ID</strong></td>
+                        <td class="text-center"><strong>Amount</strong></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center" colspan="4">No Related Transactions Found</td>
+                    </tr>
+                    <tr>
+                        <td class="text-right" colspan="3"><strong>Balance</strong></td>
+                        <td class="text-center">{{invoiced.total | currency}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="pull-right btn-group btn-group-sm hidden-print">
+        <a onclick="javascript:printDiv('invoice-container')" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
+    </div>       
+</div>
+<!-- <style>body{ background-color: #efefef; }</style> -->
+
+<script language="javascript" type="text/javascript">
+    function printDiv(divID) {
+        //Get the HTML of div
+        var divElements = document.getElementById(divID).innerHTML;
+        //Get the HTML of whole page
+        var oldPage = document.body.innerHTML;
+
+        //Reset the page's HTML with div's HTML only
+        document.body.innerHTML = 
+          "<html><head><title></title></head><body>" + 
+          divElements + "</body>";
+
+        //Print Page
+        window.print();
+
+        //Restore orignal HTML
+        document.body.innerHTML = oldPage;
+    }
+</script>

@@ -1,0 +1,88 @@
+$body_color: #888888;
+$line_height_option : 96px;
+$font_body : "Open Sans", sans-serif;
+$ipad_vertical : 768px;
+$ipad_horizol : 1024px;
+$mobile : 767px;
+$base-color-y:#fcb100;
+$base-color-b:#0d58a1;
+
+
+@mixin screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+}
+
+
+@mixin transition_ease($time) {
+  -webkit-transition: all $time ease 0s;
+  -moz-transition: all $time ease 0s;
+  -ms-transition: all $time ease 0s;
+  -o-transition: all $time ease 0s;
+  transition: all $time ease 0s;
+}
+
+
+@mixin transition_padding($time) {
+  -webkit-transition: padding $time ease 0s;
+  -moz-transition: padding $time ease 0s;
+  -ms-transition: padding $time ease 0s;
+  -o-transition: padding $time ease 0s;
+  transition: padding $time ease 0s;
+}
+
+@mixin transform_translateY($posY) {
+  -webkit-transform: translateY($posY);
+  -ms-transform: translateY($posY);
+  -o-transform: translateY($posY);
+  transform: translateY($posY);
+}
+
+@mixin transform_translateX($posX) {
+  -webkit-transform: translateX($posX);
+  -ms-transform: translateX($posX);
+  -o-transform: translateX($posX);
+  transform: translateX($posX);
+}
+
+@mixin transform_translate($posX, $posY) {
+  -webkit-transform: translateX($posX) translateY($posY);
+  -ms-transform: translateX($posX) translateY($posY);
+  -o-transform: translateX($posX) translateY($posY);
+  transform: translateX($posX) translateY($posY);
+}
+
+@mixin transform_scale($scale) {
+  -webkit-transform: scale($scale);
+  -ms-transform:  scale($scale);
+  -o-transform: scale($scale);
+  transform: scale($scale);
+}
+
+
+@mixin transform_rotate($rotate) {
+  -webkit-transform: rotate($rotate);
+  -ms-transform:  rotate($rotate);
+  -o-transform: rotate($rotate);
+  transform: rotate($rotate);
+}
+
+@mixin border_circle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+
+@mixin border_radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+

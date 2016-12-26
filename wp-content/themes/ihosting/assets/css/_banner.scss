@@ -1,0 +1,42 @@
+//banner
+.banner {
+  background-image: url("../../assets/images/bg-banner.jpg");
+  padding: 110px 0;
+  position: relative;
+  background-position: right center;
+  background-size: cover;
+  .banner-title {
+    color: #fff;
+    font-size: 36px;
+    line-height: 45px;
+  }
+  .banner-desc {
+    font-size: 20px;
+    color: $base-color-y;
+    margin: 15px 0 30px;
+  }
+  .banner-list{
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+  .banner-list > li {
+    font-size: 16px;
+    float: left;
+    list-style: outside none none;
+    width: 280px;
+  }
+  .banner-list > li li {
+    margin-bottom: 20px;
+  }
+  span {
+    color: #fff;
+  }
+  i {
+    color: $base-color-y;
+    margin-right: 5px;
+    font-style: 15px;
+  }
+
+}
+//end banner

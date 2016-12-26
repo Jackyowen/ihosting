@@ -1,0 +1,678 @@
+@import "params";
+/**********************************/
+/*      Author: T_T         */
+/**********************************/
+body {
+  font-family: $font_body;
+  font-size: 14px;
+  line-height: 25px;
+  color: #666;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: $base-color-b;
+  outline: none;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  padding-left: 0;
+}
+
+blockquote {
+  border-width: 3px;
+  background-color: transparent;
+  font-family: $font_body;
+  font-size: 14px;
+  font-style: italic;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+input[type="password"],
+input[type="tel"],
+select {
+  border: 1px solid #ddd;
+  padding: 0 15px;
+  line-height: 38px;
+  @include border_radius(3px);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="submit"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+a:focus,
+button:focus,
+select:focus {
+  outline: none;
+}
+
+*::-webkit-input-placeholder,
+*:-moz-placeholder,
+*::-moz-placeholder,
+*:-ms-input-placeholder {
+  color: #666;
+}
+
+.zoom, .imagezoom {
+  cursor: zoom-in;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+table, th, td {
+  border: 1px solid #ececec;
+}
+
+th, td {
+  padding: 10px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: #333;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+img {
+  height: auto;
+}
+
+label, th {
+  font-weight: 400;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.says,
+.screen-reader-text {
+  @include screen-reader-text;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.content-area {
+  &.has-sidebar-left {
+    float: right;
+  }
+}
+
+/* Override WOFF Filter CSS */
+
+.site-main, .site-content, #primary .site-main {
+  padding: 0;
+  margin: 0;
+}
+
+.zmb-container {
+  position: static;
+}
+
+.zmb-sticky-menu-wrap {
+  .zmb-sticky-menu-inner {
+    .zmb-sticky-inner-container {
+      position: relative;
+    }
+  }
+}
+
+/* Container in container */
+.container {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.col-xxs-1, .col-xxs-2, .col-xxs-3, .col-xxs-4, .col-xxs-5, .col-xxs-6, .col-xxs-7, .col-xxs-8, .col-xxs-9, .col-xxs-10, .col-xxs-11, .col-xxs-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (max-width: 479px) {
+  .col-xxs-1, .col-xxs-2, .col-xxs-3, .col-xxs-4, .col-xxs-5, .col-xxs-6, .col-xxs-7, .col-xxs-8, .col-xxs-9, .col-xxs-10, .col-xxs-11, .col-xxs-12 {
+    float: left;
+  }
+  .col-xxs-12 {
+    width: 100%;
+  }
+  .col-xxs-11 {
+    width: 91.66666667%;
+  }
+  .col-xxs-10 {
+    width: 83.33333333%;
+  }
+  .col-xxs-9 {
+    width: 75%;
+  }
+  .col-xxs-8 {
+    width: 66.66666667%;
+  }
+  .col-xxs-7 {
+    width: 58.33333333%;
+  }
+  .col-xxs-6 {
+    width: 50%;
+  }
+  .col-xxs-5 {
+    width: 41.66666667%;
+  }
+  .col-xxs-4 {
+    width: 33.33333333%;
+  }
+  .col-xxs-3 {
+    width: 25%;
+  }
+  .col-xxs-2 {
+    width: 16.66666667%;
+  }
+  .col-xxs-1 {
+    width: 8.33333333%;
+  }
+  .col-xxs-pull-12 {
+    right: 100%;
+  }
+  .col-xxs-pull-11 {
+    right: 91.66666667%;
+  }
+  .col-xxs-pull-10 {
+    right: 83.33333333%;
+  }
+  .col-xxs-pull-9 {
+    right: 75%;
+  }
+  .col-xxs-pull-8 {
+    right: 66.66666667%;
+  }
+  .col-xxs-pull-7 {
+    right: 58.33333333%;
+  }
+  .col-xxs-pull-6 {
+    right: 50%;
+  }
+  .col-xxs-pull-5 {
+    right: 41.66666667%;
+  }
+  .col-xxs-pull-4 {
+    right: 33.33333333%;
+  }
+  .col-xxs-pull-3 {
+    right: 25%;
+  }
+  .col-xxs-pull-2 {
+    right: 16.66666667%;
+  }
+  .col-xxs-pull-1 {
+    right: 8.33333333%;
+  }
+  .col-xxs-pull-0 {
+    right: auto;
+  }
+  .col-xxs-push-12 {
+    left: 100%;
+  }
+  .col-xxs-push-11 {
+    left: 91.66666667%;
+  }
+  .col-xxs-push-10 {
+    left: 83.33333333%;
+  }
+  .col-xxs-push-9 {
+    left: 75%;
+  }
+  .col-xxs-push-8 {
+    left: 66.66666667%;
+  }
+  .col-xxs-push-7 {
+    left: 58.33333333%;
+  }
+  .col-xxs-push-6 {
+    left: 50%;
+  }
+  .col-xxs-push-5 {
+    left: 41.66666667%;
+  }
+  .col-xxs-push-4 {
+    left: 33.33333333%;
+  }
+  .col-xxs-push-3 {
+    left: 25%;
+  }
+  .col-xxs-push-2 {
+    left: 16.66666667%;
+  }
+  .col-xxs-push-1 {
+    left: 8.33333333%;
+  }
+  .col-xxs-push-0 {
+    left: auto;
+  }
+  .col-xxs-offset-12 {
+    margin-left: 100%;
+  }
+  .col-xxs-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .col-xxs-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .col-xxs-offset-9 {
+    margin-left: 75%;
+  }
+  .col-xxs-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .col-xxs-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .col-xxs-offset-6 {
+    margin-left: 50%;
+  }
+  .col-xxs-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .col-xxs-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .col-xxs-offset-3 {
+    margin-left: 25%;
+  }
+  .col-xxs-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .col-xxs-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .col-xxs-offset-0 {
+    margin-left: 0;
+  }
+}
+
+/* -------------------- */
+/*      HEADER        */
+/* -------------------- */
+@import "header";
+
+/* button */
+.button-get-start {
+
+  @include border_radius(3px);
+  font-size: 20px;
+  font-weight: bold;
+  color: #666;
+  display: inline-block;
+  border: 1px solid #ddd;
+  &.lineheight55 {
+    line-height: 57px;
+    font-size: 18px;
+    padding: 0 35px;
+    &:hover {
+      @extend .button-get-start.active-button
+    }
+  }
+  &.lineheight47 {
+    line-height: 47px;
+    font-size: 16px;
+    padding: 0 22px;
+    &:hover {
+      @extend .button-get-start.active-button
+    }
+  }
+  &.active-button {
+    color: $base-color-b;
+    background-color: $base-color-y;
+    border: 1px solid $base-color-y;
+  }
+}
+
+/* Chosen */
+.chosen-container {
+  .chosen-single {
+    height: 32px !important;
+    line-height: 30px !important;
+    border-color: #ddd !important;
+    @include border_radius(0 !important);
+    background: transparent !important;
+    box-shadow: none !important;
+    div {
+      top: 4px !important;
+    }
+  }
+  .chosen-results {
+    li {
+      height: 32px !important;
+      line-height: 30px !important;
+      padding-bottom: 0 !important;
+      &.highlighted {
+        color: #fff;
+        background: $base-color-y !important;
+      }
+      &:before {
+        display: none;
+      }
+    }
+  }
+  .chosen-drop {
+    border-color: #ddd !important;
+    @include border_radius(0 !important);
+  }
+  .chosen-choices {
+    li {
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Site content inner */
+.site-content-inner {
+  margin-top: 55px;
+}
+
+.home {
+  .site-content-inner {
+    margin-top: 0;
+  }
+}
+
+/* Primary */
+.primary-area {
+  &.has-sidebar-left {
+    float: right;
+  }
+}
+
+//fogot-password
+.form-fogot {
+  margin-bottom: 80px;
+}
+
+//end fogot-password
+
+//best-feature
+.the-best-feature {
+  background-image: url("../../assets/images/bg-feature.jpg");
+  padding-top: 70px;
+}
+
+.image-person {
+  margin: -80px -60px 0 10px;
+}
+
+//end best-feature
+.our-plan {
+  margin: 75px 0;
+}
+
+.site-main {
+  position: relative;
+}
+
+.chose-ihosting {
+  background: rgba(0, 0, 0, 0) url("../../assets/images/bg-ih.jpg") no-repeat scroll center bottom / cover;
+  padding: 70px 0 80px;
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+.ih-text-mid {
+  position: absolute;
+  top: 50%;
+  @include transform_translateY(-50%);
+}
+
+.ih-text-mid-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  @include transform_translateY(-50%);
+}
+
+.ih-text-mid-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  @include transform_translateY(-50%);
+}
+
+footer {
+  position: relative;
+}
+
+/* -------------------- */
+/*      BANNER       */
+/* -------------------- */
+@import "banner";
+
+/* -------------------- */
+/*      FIND DOMAIN      */
+/* -------------------- */
+@import "finddomain";
+
+/* -------------------- */
+/*      TITLE-TOP        */
+/* -------------------- */
+@import "title-top";
+
+/* -------------------- */
+/*      Icon box        */
+/* -------------------- */
+@import "iconbox";
+
+/* -------------------- */
+/*      PLAN BOX       */
+/* -------------------- */
+@import "planbottom";
+
+/* -------------------- */
+/*      GREAT CLIENT       */
+/* -------------------- */
+@import "greatclient";
+
+/* -------------------- */
+/*     MESSAGE ONLINE    */
+/* -------------------- */
+@import "chatonline";
+
+/* -------------------- */
+/*      FOOTER       */
+/* -------------------- */
+@import "footer";
+
+/* -------------------- */
+/*      RESPONSIVE       */
+/* -------------------- */
+@import "responsive";
+
+/* -------------------- */
+/*      ABOUT      */
+/* -------------------- */
+@import "about";
+
+/* -------------------- */
+/*      BLOG     */
+/* -------------------- */
+@import "blog";
+
+/* -------------------- */
+/*      SIDEBAR     */
+/* -------------------- */
+@import "sidebar";
+
+/* -------------------- */
+/*      BLOG SINGLE     */
+/* -------------------- */
+@import "blogsingle";
+
+/* -------------------- */
+/*     HOSTING    */
+/* -------------------- */
+@import "hosting";
+
+/* -------------------- */
+/*     SHOP             */
+/* -------------------- */
+@import "shop";
+
+/* -------------------- */
+/*     CATEGORIES    */
+/* -------------------- */
+/* @import "categori"; */
+
+/* -------------------- */
+/*     CHECKOUT    */
+/* -------------------- */
+@import "checkout";
+
+/* -------------------- */
+/*     CART    */
+/* -------------------- */
+@import "cart";
+
+/* -------------------- */
+/*     PRODUC DETAIL    */
+/* -------------------- */
+@import "detail";
+
+/* -------------------- */
+/*     ANNOUCEMENT    */
+/* -------------------- */
+@import "annoucement";
+
+/* -------------------- */
+/*     CONTACT    */
+/* -------------------- */
+@import "contact";
+
+/* -------------------- */
+/*     WHMCS DOMAIN    */
+/* -------------------- */
+@import "whmcs_domain";
+
+/* -------------------- */
+/*     knowledgebase    */
+/* -------------------- */
+@import "knowledgebase";
+/* -------------------- */
+
+/* -------------------- */
+/*     register    */
+/* -------------------- */
+@import "register";
+/* -------------------- */
+
+/* -------------------- */
+/*     open ticket    */
+/* -------------------- */
+@import "openticket";
+/* -------------------- */
+
+/* -------------------- */
+/*     knowledgebase    */
+/* -------------------- */
+@import "knowledgebase";
+/* -------------------- */
+
+/* -------------------- */
+/*     login    */
+/* -------------------- */
+@import "login";
+/* -------------------- */
+
+/* -------------------- */
+/*     WHMCS Bridge     */
+/* -------------------- */
+@import "whmcs_bridge";
+
+/* -------------------- */
+/*     ZMB Shortcodes   */
+/* -------------------- */
+@import "zmb_shortcodes";
+/* -------------------- */
+
+/* -------------------- */
+/* Override plugins CSS */
+/* -------------------- */
+@import "plugins";
+/* -------------------- */
+
+/* -------------------- */
+/* Other CSS            */
+/* -------------------- */
+@import "other";
+/* -------------------- */
+

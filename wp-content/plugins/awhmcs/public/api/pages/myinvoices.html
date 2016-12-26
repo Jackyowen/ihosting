@@ -1,0 +1,73 @@
+<section id="main-body">
+    <div class="row">
+        <div class="col-md-3 pull-md-left sidebar" layout="column" ng-include="project.left"></div>
+        <div class="col-md-9 pull-md-right main-content">
+            <div class="header-lined">
+                <breadcrumbs breadcrumbs="breadcrumbs"></breadcrumbs>
+    		    <div class="header-title">
+                    <h1>My Invoices <small></small></h1>
+                    <select name="status" aria-controls="tableInvoicesList" class="form-control input-sm status" ng-model="selectedstatus" ng-change="hasChanged()">
+                        <option value="">All ({{invoicespl.length}})</option>
+                        <option value="Paid">Paid ({{countpaid.length}})</option>
+                        <option value="Unpaid">Unpaid ({{countunpaid.length}})</option>
+                        <option value="Cancelled">Cancelled ({{countcancelled.length}})</option>
+                        <option value="Refunded">Refunded ({{countrefunded.length}})</option>
+                    </select>
+                </div>
+    		</div>
+    
+            <div class="table-container clearfix">
+                <div id="tableInvoicesList_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                    <div class="listtable">
+                        <div id="tableInvoicesList_filter" class="dataTables_filter">
+                            <label>
+                                <input type="search" ng-model="invoicesearch" class="form-control input-sm" placeholder="Enter search term..." aria-controls="tableInvoicesList">
+                            </label>
+                            <div class="dataTables_length" id="tableInvoicesList_length">
+                                <label>Show 
+                                    <select name="tableInvoicesList_length" aria-controls="tableInvoicesList" class="form-control input-sm" ng-model="selected" ng-change="hasChanged()">
+                                        <option value="" selected>10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="{{total}}">All</option>
+                                    </select> entries
+                                </label>
+                            </div>
+                        </div>
+                        <table id="tableInvoicesList" class="table table-list dataTable table-bordered no-footer dtr-inline responsive-table" aria-describedby="tableInvoicesList_info" role="grid">
+                            <thead>
+                                <tr role="row">
+                                	<th class="sorting" tabindex="0" aria-controls="tableInvoicesList" rowspan="1" colspan="1" aria-label="Invoice #: activate to sort column ascending" style="width: 0px;">Invoice #</th>
+                                	<th class="sorting" tabindex="0" aria-controls="tableInvoicesList" rowspan="1" colspan="1" aria-label="Invoice Date: activate to sort column ascending" style="width: 0px;">Date</th>
+                                	<th class="sorting_asc" tabindex="0" aria-controls="tableInvoicesList" rowspan="1" colspan="1" aria-label="Due Date: activate to sort column ascending" style="width: 0px;">Due Date</th>
+                                	<th class="sorting" tabindex="0" aria-controls="tableInvoicesList" rowspan="1" colspan="1" aria-label="Total: activate to sort column ascending" style="width: 0px;">Total</th>
+                                	<th class="sorting_desc" tabindex="0" aria-controls="tableInvoicesList" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 0px;" aria-sort="descending">Status</th>
+                                	<th class="responsive-edit-button sorting" style="display: none; width: 0px;" tabindex="0" aria-controls="tableInvoicesList" rowspan="1" colspan="1" aria-label=": activate to sort column ascending"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-click="goPage(invoice.id)" role="row" class="odd" ng-repeat = "invoice in invoices | filter: invoicesearch">
+                    	            <td data-label="Invoice #" lass="">{{invoice.id}}</td>
+                    	            <td data-label="Date"><span class="hidden">2016-07-29</span>{{invoice.date}}</td>
+                    	            <td data-label="Due Date" class="sorting_2"><span class="hidden">{{invoice.duedate}}</span>{{invoice.duedate}}</td>
+                    	            <td data-label="Total">{{invoice.subtotal | currency}}</td>
+                    	            <td data-label="Status" class="sorting_1 status-{{invoice.status | lowercase}}">{{invoice.status}}</td>
+                                </tr>
+                                <tr ng-show="!invoices.length"><td valign="top" colspan="5" class="dataTables_empty">No Records Found</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                   <div class="footer-lined">
+                       <div class="dataTables_info" id="tableInvoicesList_info" role="status" aria-live="polite">Showing 1 to {{pageSize}} of {{total}} entries</div>
+                       <div paging page="page" page-size="pageSize" total="total" paging-action="paging(page)"></div>  
+                   </div>
+               </div>
+                <div class="text-center hidden" id="tableLoading">
+                    <p><i class="fa fa-spinner fa-spin"></i> Loading...</p>
+                </div>
+            </div>
+        </div><!-- /.main-content -->
+                   
+            </div>
+    <div class="clearfix"></div>
+</section>

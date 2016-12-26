@@ -1,0 +1,108 @@
+/**
+ * Admin Styles 
+ */
+
+html {
+    background-color: #f1f1f1;
+}
+
+h1:focus, h2:focus, h3:focus,
+h4:focus, h5:focus, h6:focus {
+    outline: none;
+}
+
+.width100 {
+    width: 100% !important;
+}
+
+/* Edit menu */
+.menu-item-settings {
+    overflow: hidden;
+}
+
+.icon-img-list {
+    clear: both;
+}
+
+.icon-img-list li {
+    list-style: none;
+    float: left;
+    margin-right: 7px;
+}
+
+.icon-img-list a {
+    text-decoration: none;
+    text-align: center;
+    width: 18px;
+    height: 18px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    display: block;
+}
+
+.icon-img-list img {
+    max-width: 18px;
+}
+
+.icon-img-list a.active, .icon-img-list a:hover {
+    border-color: #00a0d2;
+}
+
+/* Metabox */
+.cmb2-metabox .cmb-repeat-group-wrap {
+    max-width: 100% !important;
+}
+
+/* Custom Header Layout */
+.header-layout-preview-title {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.header-layout-preview-wrap img {
+    border: 2px solid #999;
+    max-width: 100%;
+}
+
+/**
+ * Color atrributes style for product attributes 
+ **/
+.color_thumbnail {
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: url(../images/noimage/no_image_color.png);
+}
+
+/** Admin coming soon menu **/
+.ab-top-menu .ihosting_coming_soon_expired {
+    background-color: #ff5454 !important;
+}
+
+.ab-top-menu .ihosting-countdown-wrap {
+    min-width: 150px;
+    padding-left: 5px !important;
+}
+
+.ab-top-menu .ihosting-countdown-wrap .counter-item {
+    display: inline-block;
+    float: left;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+.ab-top-menu .ihosting-countdown-wrap .counter-item .number {
+    float: left;
+    color: #ff8b8b;
+    margin-right: 2px !important;
+}
+
+.ab-top-menu .ihosting-countdown-wrap .counter-item .lbl {
+    float: left;
+    color: #ffe0e0;
+}
+
+.ab-top-menu .ihosting-countdown-wrap .counter-item span {
+    font-family: courier;
+}

@@ -1,0 +1,125 @@
+.cart-page .banner-page {
+  background: transparent url("../../assets/images/bg-checkout.jpg") repeat scroll center bottom / cover ;
+}
+.shop-table-content {
+  padding: 60px 0 80px;
+}
+.div-table-cart {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  text-align: center;
+  .shop_table.cart {
+    margin: 0;
+    font-size: 16px;
+    color: #222;
+  }
+  .product-name {
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  thead th {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    color: #222;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 50px;
+    padding: 0 25px;
+    text-align: center;
+  }
+  .edit a {
+    border-bottom: 1px solid;
+    color: $base-color-y;
+    font-size: 14px;
+  }
+  input {
+    border-color: #ddd;
+    color: #aaa;
+    font-size: 14px;
+    height: 35px;
+    padding: 0;
+    text-align: center;
+    width: 55px;
+  }
+}
+.remove {
+  border: 1px solid #ddd;
+  @include border_radius(50%);
+  color: #aaa;
+  display: inline-block;
+  height: 14px;
+  line-height: 11px;
+  font-size: 12px;
+  padding: 0 0 0 0.15px;
+  text-align: center;
+  width: 14px;
+  &:hover {
+    border: 1px solid $base-color-b;
+  }
+}
+.button-get-start.button-blue {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 48px;
+  margin-top: 30px;
+  padding: 0 35px;
+  &:hover {
+    color: #fff;
+    background-color: $base-color-b;
+    border: 1px solid $base-color-b;
+    font-size: 16px;
+    padding: 0 35px;
+  }
+}
+.button-cart {
+  display: inline-block;
+  width: 100%;
+  .clear-shop {
+    display: inline-block;
+  }
+  .continue-shop, .update-cart {
+    float: right;
+    margin-left: 10px;
+  }
+}
+
+.cart_totals {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  float: right;
+  margin-top: 30px;
+  padding: 40px 30px;
+  width: 340px;
+  text-align: right;
+  table, th, td {
+    border: none;
+  }
+  .amount {
+    color: #666;
+    font-size: 16px;
+  }
+  tbody th {
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: right;
+  }
+  .process-cart {
+    color: #fff;
+    font-size: 16px;
+    line-height: 48px;
+  }
+  .multiple {
+    border-bottom: 1px solid;
+    color: #666;
+    font-size: 14px;
+  }
+  .cart-subtotal td, .shipping td {
+    padding-left: 0;
+    text-align: left;
+  }
+}

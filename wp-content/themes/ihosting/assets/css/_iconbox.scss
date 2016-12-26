@@ -1,0 +1,110 @@
+.icon-box {
+  margin: 0 20px 60px 0;
+  .icon-box-image {
+    margin-bottom: 15px;
+  }
+  .icon-box-name {
+    margin-bottom: 8px;
+  }
+  .icon-box-desc {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+.icon-box.icon-right {
+  margin: 0 0 60px 20px;
+  text-align: right;
+}
+.icon-box:hover img {
+  animation-duration: 1.2s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-name: toup;
+}
+@-webkit-keyframes toup {
+  0% {
+    @include transform_rotate(-8deg);
+  }
+  15% {
+    @include transform_rotate(8deg);
+  }
+  30% {
+    @include transform_rotate(-12deg);
+  }
+  50% {
+    @include transform_rotate(12deg);
+  }
+  70% {
+    @include transform_rotate(-6deg);
+  }
+  100% {
+    @include transform_rotate(0deg);
+  }
+
+}
+
+@-o-keyframes toup {
+  0% {
+    @include transform_rotate(-8deg);
+  }
+  15% {
+    @include transform_rotate(8deg);
+  }
+  30% {
+    @include transform_rotate(-12deg);
+  }
+  50% {
+    @include transform_rotate(12deg);
+  }
+  70% {
+    @include transform_rotate(-6deg);
+  }
+  100% {
+    @include transform_rotate(0deg);
+  }
+
+}
+
+@-moz-keyframes toup {
+  0% {
+    @include transform_rotate(-8deg);
+  }
+  15% {
+    @include transform_rotate(8deg);
+  }
+  30% {
+    @include transform_rotate(-12deg);
+  }
+  50% {
+    @include transform_rotate(12deg);
+  }
+  70% {
+    @include transform_rotate(-6deg);
+  }
+  100% {
+    @include transform_rotate(0deg);
+  }
+
+}
+
+@keyframes toup {
+  0% {
+    @include transform_rotate(-8deg);
+  }
+  15% {
+    @include transform_rotate(8deg);
+  }
+  30% {
+    @include transform_rotate(-12deg);
+  }
+  50% {
+    @include transform_rotate(12deg);
+  }
+  70% {
+    @include transform_rotate(-6deg);
+  }
+  100% {
+    @include transform_rotate(0deg);
+  }
+
+}

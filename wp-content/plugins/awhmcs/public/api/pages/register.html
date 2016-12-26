@@ -1,0 +1,128 @@
+<div layout="row">
+    <div class="loginbox register-box" layout="column">
+		<div class="col-md-12 col-sm-12 col-xs-12">	
+			<div class="row">
+				<div class="col-md-12">
+						<h2>Register</h2>
+						<div ng-show="error" class="alert alert-danger text-center">
+						    {{error}}
+						</div>	
+				</div>
+			</div>		
+			<form name="register">	
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<md-input-container class="md-block">
+								<label>First Name</label>
+								<input type="text" required name="firstname" ng-model="client.firstname">						
+							</md-input-container>	
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<md-input-container class="md-block">
+								<label>Last Name</label>
+								<input type="text" required="" name="lastname" ng-model="client.lastname">					
+							</md-input-container>		
+						</div>
+					</div>    
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<md-input-container class="md-block">
+								<label>Email Address</label>
+								<input type="text" required="" name="email" ng-model="client.email" ng-pattern="/^.+@.+\..+$/">						
+							</md-input-container>	
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<md-input-container class="md-block">
+						        <label>Phone Number</label>
+						        <input type="text" required="" name="phonenumber" ng-model="client.phonenumber">
+						    </md-input-container>	
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<md-input-container class="md-block">
+						        <label>Address 1</label>
+						        <input type="text" required name="address1" ng-model="client.address1">
+							</md-input-container>	
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<md-input-container class="md-block">
+						        <label>Address 2</label>
+						        <input type="text" name="address2" ng-model="client.address2">
+							</md-input-container>	
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<md-input-container class="md-block">
+						        <label>City</label>
+						        <input type="text" required="" name="city" ng-model="client.city">
+							</md-input-container>	
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<md-input-container class="md-block">
+						        <label>Zip Code</label>
+				 		        <input type="text" required="" name="postcode" ng-model="client.postcode">	        
+							</md-input-container>	
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 col-sm-6 col-xs-12">
+							<md-input-container ng-show="text" class="md-block">
+						        <label>State/Region *</label>
+				 		        <input type="text" name="state" ng-model="client.state">	        
+							</md-input-container>
+					      <md-input-container ng-show="!text" class="md-block">
+					        <label>State/Region</label>
+					        <md-select ng-model="client.state">
+					          <md-option required ng-repeat="state in states" ng-value="stateVal(state)">
+					            {{state.name}}
+					          </md-option>
+					        </md-select>	        
+					      </md-input-container>								
+						</div>
+						
+						<div class="col-md-8 col-sm-6 col-xs-12">
+							<md-input-container class="md-block">
+						        <label>Country</label>
+						        <md-select required ng-model="client.country" name="country" ng-change="updateState(client.country)">
+						          <md-option ng-repeat="country in countries"  value="{{country.code}}">
+						            {{country.name}}
+						          </md-option>
+						        </md-select>			        
+							</md-input-container>	 
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<md-input-container class="md-block">
+								<label>Password</label>
+								<md-icon md-font-icon="fa fa-lock"></md-icon>
+								<input type="password" required="" name="password1" ng-model="client.password1">
+							</md-input-container>	
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<md-input-container class="md-block">
+								<label>Confirm Password</label>
+								<md-icon md-font-icon="fa fa-lock"></md-icon>						
+								<input type="password" required="" name="password2" ng-model="client.password2">
+							</md-input-container>
+						</div>
+					</div>	
+				<div class="row">
+					<div class="col-md-12">			
+						<div class="action-button">
+						    <md-action>
+						    	<md-button ng-disabled="!register.$valid" ng-click="registerSubmit()" type="submit" class="md-raised md-primary">Register Now</md-button>
+						    </md-action>				
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+    </div>
+</div>

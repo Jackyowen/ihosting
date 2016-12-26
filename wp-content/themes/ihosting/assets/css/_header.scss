@@ -1,0 +1,317 @@
+@media (min-width: 1200px) {
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+//header
+.header-top {
+  background-color: #f6f6f6;
+  line-height: 11px;
+  padding: 20px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.header-top-left {
+  display: inline-block;
+  float: left;
+}
+
+.header-top-right {
+  display: inline-block;
+  float: right;
+  ul {
+    margin: 0;
+    li {
+      padding: 0 10px;
+      display: inline-block;
+      border-right: 1px solid #ccf;
+      position: relative;
+      &:last-child {
+        border: none;
+        padding-bottom: 20px;
+        cursor: pointer;
+      }
+      span.click-country {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      i {
+        color: #888;
+      }
+      .country.selected {
+        display: block;
+        padding-top: 10px;
+        position: absolute;
+        top: 100%;
+      }
+      .country.select {
+        display: block;
+        position: relative;
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+.country-dropdown {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  @include border_radius(3px);
+  left: -10px;
+  padding: 20px 20px 25px;
+  position: absolute;
+  top: 25px;
+  width: 145px;
+  z-index: 4;
+  .country {
+    margin-bottom: 20px;
+    cursor: pointer;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.header-bottom {
+  padding: 30px 0;
+  > .container {
+    position: relative;
+  }
+}
+
+.logo {
+  display: inline-block;
+  float: left;
+  margin: 0;
+  line-height: 60px;
+  a {
+    color: $base-color-b;
+  }
+  span {
+    color: $base-color-y;
+  }
+}
+
+.header-bottom-right {
+  display: inline-block;
+  float: right;
+  ul {
+    float: left;
+  }
+
+  /* CSS Header for WordPress Mega Menu */
+  .site-navigation {
+    .zmb-wrap {
+      overflow: visible;
+      > .menu {
+        position: static;
+        > .menu-item {
+          text-transform: none;
+          line-height: 24px;
+          background-color: transparent;
+          margin-left: 30px;
+          > a {
+            text-transform: none;
+            line-height: 24px;
+            padding: 20px 0;
+            background-color: transparent;
+            color: #333;
+            font-size: 16px;
+            &:before {
+              background-color: $base-color-b;
+              bottom: 20px;
+              content: "";
+              display: inline-block;
+              height: 1px;
+              left: 50%;
+              position: absolute;
+              right: 50%;
+              transition: all 0.3s ease 0s;
+            }
+          }
+          &.menu-item-has-children .dropdown-toggle .caret {
+
+          }
+          .sub-menu {
+            border: 1px solid #ddd;
+            z-index: -1;
+            @include border_radius(3px);
+            .zanmenu-content {
+              padding: 20px 50px;
+            }
+          }
+          &:hover {
+            background-color: transparent;
+            color: #333;
+            > a {
+              color: $base-color-b;
+              background-color: transparent;
+              &:before {
+                left: 0;
+                right: 0;
+                transition: all 0.3s ease 0s;
+              }
+            }
+            .dropdown-toggle .caret {
+              color: transparent;
+            }
+            > .sub-menu {
+              z-index: 10000;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.zmb-sticky-menu-wrap {
+  .zmb-sticky-menu-inner {
+    background-color: #fff;
+    .zmb-menu-wrap-sticky {
+      width: 100%;
+      float: left;
+      position: relative;
+    }
+  }
+}
+
+.zmb-wrap {
+  .zmb-menu > li.zmb-cart .zmb-cart-icon {
+    line-height: 18px;
+  }
+}
+
+.zmb-wrap {
+  .zmb-menu {
+    > li  {
+      > a {
+        text-transform: none;
+      }
+    }
+    .menu-item-has-children .dropdown-toggle .caret {
+      display: none;
+    }
+  }
+}
+
+.main-menu, .icon-cart, .icon-search {
+  float: right;
+}
+
+//end header
+
+//menu sticky
+.header-bottom.menu-fixed {
+  @include transition_padding(0.3s);
+  background-color: #fff;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  padding: 0;
+  .header-bottom-right .mega-menu {
+    top: 65px;
+  }
+}
+
+@media (min-width: 1205px) {
+  div.icon-cart:hover .header-element-content,
+  div.icon-cart:hover .no-item,
+  .has-mega-menu:hover .mega-menu,
+  div.icon-search:hover input,
+  .header-bottom-right ul li:hover ul {
+    @include transform_translateY(0);
+    @include transition_ease(0.6s);
+    opacity: 1;
+    z-index: 4;
+    visibility: visible;
+  }
+  .icon-country:hover .country-dropdown {
+    display: block !important;
+  }
+}
+
+/* Header Banner (Heading, Breadcrumb) */
+.ih-heading-banner {
+  > .container {
+    position: relative;
+    height: 100%;
+    display: block;
+  }
+  .page-heading {
+    display: inline-block;
+    float: left;
+    font-size: 36px;
+    color: #fff;
+    max-width: 680px;
+  }
+  .breadcrumb-wrap {
+    float: right;
+    max-width: 425px;
+    .breadcrumbs {
+      li {
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 10px;
+        padding-right: 15px;
+        position: relative;
+        color: inherit;
+        a {
+          color: inherit;
+        }
+        &:after {
+          content: '/';
+          position: absolute;
+          right: 4.5px;
+        }
+        &:last-child {
+          padding-right: 0;
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+    .woocommerce-breadcrumb {
+      color: inherit;
+      a {
+        color: inherit;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .ih-heading-banner .breadcrumb-wrap {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .ih-heading-banner .breadcrumb-wrap {
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: 15px;
+    @include transform_translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .ih-heading-banner {
+    .page-heading {
+      font-size: 24px;
+    }
+  }
+  .ih-heading-banner .breadcrumb-wrap {
+    display: none;
+  }
+}

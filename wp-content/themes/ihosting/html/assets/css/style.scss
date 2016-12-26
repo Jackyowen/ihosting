@@ -1,0 +1,373 @@
+
+@import "params";
+/**********************************/
+/*      Author: T_T         */
+/**********************************/
+body {
+  font-family: $font_body;
+  font-size: 14px;
+  line-height: 25px;
+  color: #666;
+  width: 100%;
+  overflow-x: hidden; }
+h1 {
+  font-size: 60px; }
+
+h2 {
+  font-size: 30px; }
+
+h3 {
+  font-size: 26px; }
+
+h4 {
+  font-size: 22px; }
+
+h5 {
+  font-size: 20px; }
+
+h6 {
+  font-size: 18px; }
+
+img {
+  max-width: 100%; }
+
+a {
+  color: #333;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  text-decoration: none; }
+
+a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: $base-color-b;
+  outline: none; }
+
+p {
+  margin-bottom: 20px; }
+
+ul, ol {
+  margin: 0;
+  padding: 0; }
+
+ul ul, ol ol, ul ol, ol ul {
+  padding-left: 0; }
+
+blockquote {
+  border-width: 3px;
+  background-color: transparent;
+  font-family: $font_body;
+  font-size: 14px;
+  font-style: italic;
+  color: #333; }
+
+input[type="text"],
+input[type="email"],
+textarea,
+input[type="password"],
+input[type="tel"],
+select {
+  border: 1px solid #ddd;
+  padding: 0 15px;
+  line-height: 38px;
+  @include border_radius(3px);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="submit"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+a:focus,
+button:focus,
+select:focus {
+  outline: none; }
+
+*::-webkit-input-placeholder,
+*:-moz-placeholder,
+*::-moz-placeholder,
+*:-ms-input-placeholder
+{
+  color: #666;
+}
+
+.zoom, .imagezoom {
+  cursor: zoom-in; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 10px; }
+
+table, th, td {
+  border: 1px solid #ececec; }
+
+th, td {
+  padding: 10px; }
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: #333;
+  margin-bottom: 0;
+}
+ul, li {
+  list-style: none;
+}
+img {
+  height: auto;
+}
+label, th {
+  font-weight: 400;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+//header
+
+a {
+  &:hover{
+    text-decoration: none;
+  }
+}
+/* -------------------- */
+/*      HEADER        */
+/* -------------------- */
+@import "header";
+
+
+
+
+//button
+.button-get-start {
+
+  @include border_radius(3px);
+  font-size: 20px;
+  font-weight: bold;
+  color: #666;
+  display: inline-block;
+  border: 1px solid #ddd;
+  &.lineheight55 {
+    line-height: 57px;
+    font-size: 18px;
+    padding: 0 35px;
+    &:hover {
+      @extend .button-get-start.active-button
+    }
+  }
+  &.lineheight47 {
+    line-height: 47px;
+    font-size: 16px;
+    padding: 0 22px;
+    &:hover {
+      @extend .button-get-start.active-button
+    }
+  }
+  &.active-button {
+    color: $base-color-b;
+    background-color: $base-color-y;
+    border: 1px solid $base-color-y;
+  }
+}
+//end button
+
+//fogot-password
+.form-fogot {
+  margin-bottom: 80px;
+}
+//end fogot-password
+
+//best-feature
+.the-best-feature {
+  background-image: url("../../assets/images/bg-feature.jpg");
+  padding-top: 70px;
+}
+.image-person {
+  margin: -80px -60px 0 10px;
+}
+//end best-feature
+.our-plan {
+  margin: 75px 0;
+}
+.site-main {
+  position: relative;
+}
+.chose-ihosting {
+  background: rgba(0, 0, 0, 0) url("../../assets/images/bg-ih.jpg") no-repeat scroll center bottom / cover ;
+  padding: 70px 0 80px;
+}
+.navbar-toggle {
+  display: none;
+}
+footer {
+  position: relative;
+}
+/* -------------------- */
+/*      BANNER       */
+/* -------------------- */
+@import "banner";
+
+
+/* -------------------- */
+/*      FIND DOMAIN      */
+/* -------------------- */
+@import "finddomain";
+
+
+/* -------------------- */
+/*      TITLE-TOP        */
+/* -------------------- */
+@import "title-top";
+
+
+/* -------------------- */
+/*      Icon box        */
+/* -------------------- */
+@import "iconbox";
+
+
+/* -------------------- */
+/*      PLAN BOX       */
+/* -------------------- */
+@import "planbottom";
+
+
+/* -------------------- */
+/*      GREAT CLIENT       */
+/* -------------------- */
+@import "greatclient";
+
+
+/* -------------------- */
+/*     MESSAGE ONLINE    */
+/* -------------------- */
+@import "chatonline";
+
+
+/* -------------------- */
+/*      FOOTER       */
+/* -------------------- */
+@import "footer";
+
+
+
+/* -------------------- */
+/*      RESPONSIVE       */
+/* -------------------- */
+@import "responsive";
+
+
+/* -------------------- */
+/*      ABOUT      */
+/* -------------------- */
+@import "about";
+
+
+/* -------------------- */
+/*      BLOG     */
+/* -------------------- */
+@import "blog";
+
+/* -------------------- */
+/*      SIDEBAR     */
+/* -------------------- */
+@import "sidebar";
+
+
+/* -------------------- */
+/*      BLOG SINGLE     */
+/* -------------------- */
+@import "blogsingle";
+
+/* -------------------- */
+/*     HOSTING    */
+/* -------------------- */
+@import "hosting";
+
+
+/* -------------------- */
+/*     CATEGORIES    */
+/* -------------------- */
+@import "categori";
+
+
+/* -------------------- */
+/*     CHECKOUT    */
+/* -------------------- */
+@import "checkout";
+
+/* -------------------- */
+/*     CART    */
+/* -------------------- */
+@import "cart";
+
+
+
+/* -------------------- */
+/*     PRODUC DETAIL    */
+/* -------------------- */
+@import "detail";
+
+
+/* -------------------- */
+/*     ANNOUCEMENT    */
+/* -------------------- */
+@import "annoucement";
+
+/* -------------------- */
+/*     CONTACT    */
+/* -------------------- */
+@import "contact";
+
+/* -------------------- */
+/*     WHMCS DOMAIN    */
+/* -------------------- */
+@import "whmcs_domain";
+
+
+
+/* -------------------- */
+/*     knowledgebase    */
+/* -------------------- */
+@import "knowledgebase";
+/* -------------------- */
+
+
+
+/* -------------------- */
+/*     register    */
+/* -------------------- */
+@import "register";
+/* -------------------- */
+
+
+
+/* -------------------- */
+/*     open ticket    */
+/* -------------------- */
+@import "openticket";
+/* -------------------- */
+
+
+
+/* -------------------- */
+/*     knowledgebase    */
+/* -------------------- */
+@import "knowledgebase";
+/* -------------------- */
+
+
+/* -------------------- */
+/*     login    */
+/* -------------------- */
+@import "login";
+/* -------------------- */
+
+
+
+
+
+

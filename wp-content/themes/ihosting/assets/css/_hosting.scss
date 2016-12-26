@@ -1,0 +1,20 @@
+.hosting-page .banner-page {
+  background: rgba(0, 0, 0, 0) url("../../assets/images/bg-hosting.jpg") repeat scroll center bottom / cover;
+}
+.your-question {
+  background-image: url("../../assets/images/bg-feature.jpg");
+  padding: 75px 0;
+  .your-question-box {
+    border: 1px solid #ddd;
+    @include border_radius(3px);
+    margin-bottom: 30px;
+    padding: 30px 25px 35px;
+  }
+  .question-title {
+    margin-bottom: 10px;
+    line-height: 25px;
+  }
+  .question-text {
+    color: #888;
+  }
+}

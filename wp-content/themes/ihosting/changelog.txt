@@ -1,0 +1,36 @@
+=== iHosting ===
+
+Requires at least: 4.0
+Tested up to: 4.5.3
+Stable tag: 1.2
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+== Description ==
+
+iHosting - En E-commerce WordPress theme, which is built base on 2016 design trending. iHosting suitable with any kind of shop, with smoothly elegant layout.
+
+== Installation ==
+	
+1. In your admin panel, go to Appearance > Themes and click the Add New button.
+2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
+3. Click Activate to use your new theme right away.
+
+== Changelog ==
+
+= 1.2 - September 01 2016 =
+    - Fixed: Custom CSS
+    - Fixed: Custom Color
+    - Fixed: Place Order button
+    - Fixed: Single blog image height
+    - Improved: Some shortcodes
+    - Improved: RTL CSS
+    - Added: Home 5 demo data
+
+= 1.1 - August 08 2016 =
+    - Fixed: RTL issue
+    - Added: Single product sidebar
+    - Improve CSS and JS
+
+= 1.0 - May 01 2016 =
+    * Initial release

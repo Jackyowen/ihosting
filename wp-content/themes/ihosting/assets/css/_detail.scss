@@ -1,0 +1,221 @@
+.img-thumb-list .owl-stage-outer {
+  border-right: 1px solid #ddd;
+}
+.product-detail {
+  display: inline-block;
+  width: 100%;
+  .image-product-categories {
+    float: left;
+    padding-right: 30px;
+    width: 65%;
+  }
+  .categories-detail {
+    float: left;
+    width: 35%;
+  }
+  .image-product-categories img {
+    border: 1px solid #ddd;
+  }
+  .img-thumb {
+    display: inline-block;
+    margin: 10px 0 0;
+    width: 100%;
+  }
+
+  .product img {
+    width: 100%;
+  }
+  label {
+    font-weight: 400;
+  }
+  .product-name-cat, .product-kind {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+  }
+  .product-cost-cat span {
+    color: #666;
+    font-size: 14px;
+    margin-left: 50px;
+    ins {
+      text-decoration: none;
+      color: $base-color-y;
+    }
+  }
+  .categories-detail-bottom {
+    margin-top: 30px;
+  }
+  .detail-decoription label {
+    color: #333;
+    font-size: 16px;
+  }
+  .button-product-detail .input-text {
+    color: #aaa;
+    height: 48px;
+    padding: 0;
+    text-align: center;
+    width: 85px;
+  }
+  .like-product {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #666;
+    font-size: 16px;
+    line-height: 46px;
+    text-align: center;
+    width: 50px;
+  }
+  .button-product-detail {
+    display: inline-block;
+    margin-top: 20px;
+    width:100%;
+  }
+  .button-product-detail > div {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+  }
+}
+.img-thumb-list {
+  .owl-prev {
+    font-size: 40px;
+    left: 20px;
+    position: absolute;
+    top: 50%;
+    @include transform_translateY(-50%);
+  }
+  .owl-next {
+    font-size: 40px;
+    right: 20px;
+    position: absolute;
+    top: 50%;
+    @include transform_translateY(-50%);
+  }
+  .owl-nav div{
+    display: none !important;
+    color: $base-color-y;
+    &:hover {
+      color: #000;
+    }
+  }
+  &:hover .owl-nav div{
+    display: block !important;
+  }
+}
+.desc-review {
+  margin-top: 25px;
+}
+.desc-review-content {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 33px;
+  .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    vertical-align: middle;
+  }
+  table, th, td {
+    border: medium none;
+  }
+  td {
+    width: 50%;
+  }
+  .table > tbody > tr:first-child > td {
+    border: medium none;
+  }
+  .comment_container {
+    padding-left: 80px;
+    position: relative;
+    img {
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+    .meta {
+      font-size: 12px;
+      margin: 0;
+    }
+    .description {
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      padding: 5px 15px;
+    }
+  }
+  .review-content {
+    h3 {
+      margin: 15px 0;
+    }
+  }
+  label {
+    width: 100%;
+  }
+  .form-submit {
+    text-align: center;
+  }
+  .submit {
+    border: 1px solid $base-color-y;
+    width:auto;
+  }
+  textarea, input {
+    width: 100%;
+  }
+}
+.desc-review .nav-pills li{
+  display: inline-block;
+  a {
+    background-color: #f1f1f1;
+    border-color: #ddd;
+    border-radius: 3px 3px 0 0;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    color: #666;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 50px;
+    margin-right: 6px;
+    padding: 0 20px;
+  }
+  &.active a, & a:hover{
+    background-color: #333;
+    color: #fff;
+  }
+}
+.product-relative {
+  .owl-item a {
+    border: 1px solid #ddd;
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+  }
+  h5 {
+    margin: 55px 0 25px;
+  }
+  .relative-cost {
+    color: #333;
+    font-size: 16px;
+  }
+  .owl-nav > div {
+    color: $base-color-y;
+    display: inline-block;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    @include transform_translateY(-60px);
+  }
+  .owl-nav {
+    display: none;
+  }
+  &:hover .owl-nav  {
+    display: block;
+  }
+  .owl-prev {
+    left: 15px;
+  }
+  .owl-next {
+    right: 15px;
+  }
+  .relative-name {
+    margin: 1px 0 8px;
+  }
+}

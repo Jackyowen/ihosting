@@ -1,0 +1,58 @@
+.plan-title {
+  color: $base-color-b;
+}
+.plan-desc {
+  color: #aaa;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+.plan-cost {
+  font-size: 18px;
+  margin-bottom: 35px;
+  span {
+    font-size: 30px;
+    color: $base-color-y;
+    font-weight:bold;
+  }
+}
+.plan-list {
+  margin-bottom: 25px;
+}
+.plan-list li {
+  margin-bottom: 8px;
+  padding-left: 30px;
+  position: relative;
+  &::before {
+    color: $base-color-b;
+    content: "\f00c";
+    font-family: "FontAwesome";
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+.pland-bottom-box {
+  border: 1px solid #ddd;
+  @include border_radius(3px);
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.pland-bottom-box.featued {
+  border: 1px solid $base-color-y;
+}
+.text-feature {
+  background-color: #e43e43;
+  color: #fff;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  right: -65px;
+  text-align: center;
+  text-transform: uppercase;
+  top: 16px;
+  @include transform_rotate(46deg);
+  width: 200px;
+}

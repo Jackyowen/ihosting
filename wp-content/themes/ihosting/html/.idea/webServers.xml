@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="609a9e05-6099-4ba1-b0c4-6a1161ff6876" name="ihosting" url="http://dev06.ovicsoft.com">
+        <fileTransfer host="dev06.ovicsoft.com" port="21" rootFolder="/html/ihosting" password="dfd9dfe0dfd3dfeddff4dff2dfeadfdadfcedff8dfe2dfda" username="tho@dev06.ovicsoft.com">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

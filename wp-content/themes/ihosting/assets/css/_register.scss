@@ -1,0 +1,16 @@
+.form-register {
+  margin-bottom: 80px;
+  select {
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    border: 1px solid #aaa;
+    height: 40px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0) url("../../assets/images/arrow-select.png") no-repeat scroll 93% 49%;
+  }
+  div .button-get-start {
+    margin-left: 15px;
+    padding: 0 35px;
+  }
+}

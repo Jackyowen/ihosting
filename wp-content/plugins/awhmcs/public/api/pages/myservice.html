@@ -1,0 +1,71 @@
+<div id="main-body" class="row myservice">
+    <div class="col-md-3 pull-md-left sidebar" layout="column" ng-include="project.left"></div>
+    <div class="col-md-9 pull-md-right main-content" layout="column">
+        <div class="header-lined">
+            <breadcrumbs breadcrumbs="breadcrumbs"></breadcrumbs>
+            <div class="header-title">
+                <h1>My Products & Services </h1>
+                <select name="status" aria-controls="tableInvoicesList" class="form-control input-sm status" ng-model="selectedstatus" ng-change="hasChanged()">
+                    <option value="Active">Active ({{countactive.length}})</option>
+                    <option value="Pending">Pending ({{countpending.length}})</option>
+                    <option value="Suspended">Suspended ({{countsuspended.length}})</option>
+                    <option value="Terminated">Terminated ({{countterminated.length}})</option>
+                    <option value="Cancelled">Cancelled ({{countcancelled.length}})</option>
+                    <option value="">All ({{total}})</option>
+                </select>
+            </div>
+        </div>
+		<div layout="column">
+            <div class="table-container clearfix">
+                <div id="tableServicesList_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                    <div class="listtable">
+                        <div id="tableServicesList_filter" class="dataTables_filter">
+                            <label>
+                                <input type="search" ng-model="servicessearch" class="form-control input-sm" placeholder="Enter search term..." aria-controls="tableServicesList">
+                            </label>
+                            <div class="dataTables_length" id="tableServicesList_length">
+                                <label>Show 
+                                    <select name="tableServicesList_length" aria-controls="tableServicesList" class="form-control input-sm">
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="-1">All</option>
+                                    </select> entries
+                                </label>
+                            </div>
+                        </div>
+                        
+	                        <table id="tableServicesList" class="table table-hover table-bordered table-list dataTable no-footer dtr-inline responsive-table" aria-describedby="tableServicesList_info" role="grid">
+	                            <thead>
+	                                <tr role="row">
+	                                    <th class="sorting_asc" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1">Product/Service</th>
+	                                    <th class="sorting text-center" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" style="width: 0px;">Pricing</th>
+	                                    <th class="sorting text-center" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" style="width: 0px;">Next Due Date</th>
+	                                    <th class="sorting_asc text-right" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1"  style="width: 0px;">Status</th>
+	                                </tr>
+	                            </thead>
+	                            <tbody>    
+	                                <tr ng-click="goPage(service.id)" ng-repeat = "service in services | filter: servicessearch" role="row" class="odd">
+		                                <td data-label="Product/Service" class="sorting_1">
+		                                	<strong>{{service.groupname}}</strong><br>
+		                                	<a href="http://{{service.domain}}" target="_blank">{{service.domain}}</a>
+		                                </td>
+		                                <td data-label="Pricing" class="text-center">{{service.firstpaymentamount | currency}}<br>{{service.billingcycle}}</td>
+		                                <td data-label="Next Due Date" class="text-center"><span class="hidden">{{service.nextduedate}}</span>{{service.nextduedate}}</td>
+		                                <td data-label="Status" class="status-{{service.status | lowercase}} text-right">{{service.status}}</td>
+									</tr>
+                                    <tr ng-show="!services.length"><td valign="top" colspan="4" class="dataTables_empty">No Records Found</td></tr>
+	                            </tbody>
+	                        </table>
+                        
+                    </div>
+                    <div class="footer-lined">
+                        <div class="dataTables_info" id="tableDomainsList_info" role="status" aria-live="polite">Showing 1 to 10 of {{total}} entries</div>
+                        <div paging page="page" page-size="pageSize" total="total" paging-action="paging(page)"></div>          
+                    </div>
+
+            </div>
+		</div>
+
+    </div>
+</div>

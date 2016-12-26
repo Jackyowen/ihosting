@@ -1,0 +1,119 @@
+//find domain
+.find-domain {
+  padding: 55px 0;
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
+
+.search-domain-left {
+  float: left;
+  .search-domain-input {
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    &::before {
+      background-color: #aaa;
+      content: "";
+      height: 30px;
+      position: absolute;
+      right: 110px;
+      top: 15px;
+      width: 1px;
+    }
+    input {
+      border: 1px solid #aaa;
+      @include border_radius(3px);
+      color: #aaa;
+      font-size: 16px;
+      line-height: 32px;
+      padding: 12px 110px 12px 25px;
+      width: 530px;
+    }
+    select {
+      border: medium none;
+      color: #333;
+      display: inline-block;
+      font-size: 18px;
+      height: 53px;
+      line-height: 53px;
+      position: absolute;
+      right: 3px;
+      top: 1px;
+      width: 110px;
+      background: rgba(0, 0, 0, 0) url("../../assets/images/arrow-select.png") no-repeat scroll 80% 49%;
+    }
+  }
+  .button-get-start::before {
+    content: "\f101";
+    font-family: "FontAwesome";
+    position: absolute;
+    right: 38px;
+  }
+  .button-get-start {
+    padding: 0 55px 0 35px;
+    position: relative;
+  }
+}
+
+.find-domain-right, .domain-prices-list {
+  display: inline-block;
+  float: right;
+  text-align: right;
+  .domain-single {
+    display: inline-block;
+    margin-left: 38px;
+    position: relative;
+    &::before {
+      background-color: #ddd;
+      content: "";
+      display: inline-block;
+      height: 45px;
+      left: -12px;
+      position: absolute;
+      top: 5px;
+      @include transform_rotate(18deg);
+      width: 1.5px;
+    }
+    &:first-child::before {
+      background-color: transparent;
+    }
+  }
+
+  .domain-title {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+  .domain-cost {
+    color: #aaa;
+    font-size: 14px;
+    margin: 0;
+  }
+  .domain-cost span {
+    font-size: 26px;
+    color: $base-color-b;
+    font-weight: bold;
+  }
+}
+
+.find-domain-text {
+  color: #222;
+  font-size: 26px;
+  margin-bottom: 30px;
+  div {
+    display: inline-block;
+    font-size: 18px;
+    color: #666;
+    span {
+      color: $base-color-y;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+
+}

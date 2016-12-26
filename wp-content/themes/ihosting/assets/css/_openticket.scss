@@ -1,0 +1,34 @@
+//open ticket
+.open-ticket-department {
+  display: inline-block;
+  width:100%;
+  select {
+    -moz-appearance: none;
+    border: 1px solid #aaa;
+    height: 38px;
+    width: 270px;
+    background: rgba(0, 0, 0, 0) url("../../assets/images/arrow-select.png") no-repeat scroll 93% 49%;
+  }
+  p {
+    display: inline-block;
+    margin-right: 30px;
+    float: left;
+  }
+}
+.form-open-ticket.form .button-get-start {
+  padding: 0 35px;
+}
+.open-ticket-box > input[type="file"] {
+  line-height: 22px;
+  padding: 8px 15px;
+}
+.attachment {
+  margin-bottom: 20px;
+}
+.form-open-ticket {
+  margin-bottom: 80px;
+}
+.attachment-title {
+  margin: 0 0 5px;
+}
+//end open ticket

@@ -1,0 +1,6 @@
+<h3>Payment Details</h3>
+<md-input-container class="md-block">
+	<md-radio-group ng-model="paymentmethod" class="md-primary">
+		<md-radio-button ng-repeat="payment in paymentmethods" ng-value="payment.module">{{ payment.displayname }}</md-radio-button>
+	</md-radio-group>								        
+</md-input-container>

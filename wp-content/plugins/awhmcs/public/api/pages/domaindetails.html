@@ -1,0 +1,217 @@
+<section id="main-body">
+
+    <div class="row">
+        <div class="col-md-3 pull-md-left sidebar" layout="column" ng-include="project.left"></div>
+        
+                        
+                <!-- Container for main page display content -->
+        <div class="col-md-9 pull-md-right">
+            <div class="header-lined">
+                <div class="header-title" ng-repeat = "domain in domains">
+                    <h1>Managing {{domain.domainname}}</h1>
+                </div>
+            </div>
+
+<div class="tab-content margin-bottom">
+    <div class="tab-pane fade in active" id="tabOverview" ng-repeat = "domain in domains">
+        <h3>Overview</h3>
+
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-5">
+                <h4><strong>Domain:</strong></h4> <a href="http://{{domain.domainname}}" target="_blank">{{domain.domainname}}</a>
+            </div>
+            <div class="col-sm-5">
+                <h4><strong>First Payment Amount:</strong></h4> <span>{{domain.firstpaymentamount}} USD</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-5">
+                <h4><strong>Registration Date:</strong></h4> <span>{{domain.regdate}}</span>
+            </div>
+            <div class="col-sm-6">
+                <h4><strong>Recurring Amount:</strong></h4> ${{domain.recurringamount}} USD Every 1 Year/s
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-5">
+                <h4><strong>Next Due Date:</strong></h4> {{domain.nextduedate}}
+            </div>
+            <div class="col-sm-6">
+                <h4><strong>Payment Method:</strong></h4> {{domain.paymentmethodname}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-5">
+                <h4><strong>Status:</strong></h4> {{domain.status}}
+            </div>
+        </div>
+
+        
+        
+        <br>
+
+        
+    </div>
+    <div class="tab-pane fade" id="tabAutorenew">
+
+        <h3>Auto Renew</h3>
+
+        
+        <div class="alert alert-info">
+        Enable auto renew to have us automatically send you a renewal invoice before your domain expires.
+</div>
+
+
+        <br>
+
+        <h2 class="text-center">Auto Renewal Status: <span class="label label-success">Enabled</span></h2>
+
+        <br>
+        <br>
+
+        <form method="post" action="/whmcs2/clientarea.php?action=domaindetails#tabAutorenew">
+<input type="hidden" name="token" value="6da6401ad64e682f537bae37e9a489ae38076b0c">
+            <input type="hidden" name="id" value="1">
+            <input type="hidden" name="sub" value="autorenew">
+                            <input type="hidden" name="autorenew" value="disable">
+                <p class="text-center">
+                    <input type="submit" class="btn btn-lg btn-danger" value="Disable Auto Renew">
+                </p>
+                    </form>
+
+    </div>
+    <div class="tab-pane fade" id="tabNameservers">
+
+        <h3>Nameservers</h3>
+
+                
+        <div class="alert alert-info">
+        You can change where your domain points to here. Please be aware changes can take up to 24 hours to propagate.
+</div>
+
+
+        <form class="form-horizontal" role="form" method="post" action="/whmcs2/clientarea.php?action=domaindetails#tabNameservers">
+<input type="hidden" name="token" value="6da6401ad64e682f537bae37e9a489ae38076b0c">
+            <input type="hidden" name="id" value="1">
+            <input type="hidden" name="sub" value="savens">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="nschoice" value="default" onclick="disableFields('domnsinputs',true)"> Use default nameservers
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="nschoice" value="custom" onclick="disableFields('domnsinputs',false)" checked=""> Use custom nameservers (enter below)
+                </label>
+            </div>
+            <br>
+                            <div class="form-group">
+                    <label for="inputNs1" class="col-sm-4 control-label">Nameserver 1</label>
+                    <div class="col-sm-7">
+                        <input type="text" name="ns1" class="form-control domnsinputs" id="inputNs1" value="">
+                    </div>
+                </div>
+                            <div class="form-group">
+                    <label for="inputNs2" class="col-sm-4 control-label">Nameserver 2</label>
+                    <div class="col-sm-7">
+                        <input type="text" name="ns2" class="form-control domnsinputs" id="inputNs2" value="">
+                    </div>
+                </div>
+                            <div class="form-group">
+                    <label for="inputNs3" class="col-sm-4 control-label">Nameserver 3</label>
+                    <div class="col-sm-7">
+                        <input type="text" name="ns3" class="form-control domnsinputs" id="inputNs3" value="">
+                    </div>
+                </div>
+                            <div class="form-group">
+                    <label for="inputNs4" class="col-sm-4 control-label">Nameserver 4</label>
+                    <div class="col-sm-7">
+                        <input type="text" name="ns4" class="form-control domnsinputs" id="inputNs4" value="">
+                    </div>
+                </div>
+                            <div class="form-group">
+                    <label for="inputNs5" class="col-sm-4 control-label">Nameserver 5</label>
+                    <div class="col-sm-7">
+                        <input type="text" name="ns5" class="form-control domnsinputs" id="inputNs5" value="">
+                    </div>
+                </div>
+                        <p class="text-center">
+                <input type="submit" class="btn btn-primary" value="Change Nameservers">
+            </p>
+        </form>
+
+    </div>
+    <div class="tab-pane fade" id="tabReglock">
+
+        <h3>Registrar Lock</h3>
+
+        
+        <div class="alert alert-info">
+        Lock your domain to prevent it from being transferred away without your authorization.
+</div>
+
+
+        <br>
+
+        <h2 class="text-center">Registrar Lock Status: <span class="label label-danger">Disabled</span></h2>
+
+        <br>
+        <br>
+
+        <form method="post" action="/whmcs2/clientarea.php?action=domaindetails#tabReglock">
+<input type="hidden" name="token" value="6da6401ad64e682f537bae37e9a489ae38076b0c">
+            <input type="hidden" name="id" value="1">
+            <input type="hidden" name="sub" value="savereglock">
+                            <input type="hidden" name="autorenew" value="enable">
+                <p class="text-center">
+                    <input type="submit" class="btn btn-lg btn-success" name="reglock" value="Enable Registrar Lock">
+                </p>
+                    </form>
+
+    </div>
+    <div class="tab-pane fade" id="tabRelease">
+
+        <h3>Release Domain</h3>
+
+        <div class="alert alert-info">
+        Enter a new TAG here to move your domain name to another registrar
+</div>
+
+
+        <form class="form-horizontal" role="form" method="post" action="/whmcs2/clientarea.php?action=domaindetails">
+<input type="hidden" name="token" value="6da6401ad64e682f537bae37e9a489ae38076b0c">
+            <input type="hidden" name="sub" value="releasedomain">
+            <input type="hidden" name="id" value="1">
+
+            <div class="form-group">
+                <label for="inputReleaseTag" class="col-xs-4 control-label">New Registrar Tag</label>
+                <div class="col-xs-6 col-sm-5">
+                    <input type="text" class="form-control" id="inputReleaseTag" name="transtag">
+                </div>
+            </div>
+
+            <p class="text-center">
+                <input type="submit" value="Release Domain" class="btn btn-primary">
+            </p>
+        </form>
+
+    </div>
+    <div class="tab-pane fade" id="tabAddons">
+
+        <h3>Addons</h3>
+
+        <p>
+            The following addons are available for your domain(s)...
+        </p>
+
+                            </div>
+</div>
+
+
+
+    
+        </div><!-- /.main-content -->
+
+            </div>
+    <div class="clearfix"></div>
+</section>

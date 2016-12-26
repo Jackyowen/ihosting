@@ -1,0 +1,148 @@
+.checkout-content {
+  padding: 55px 0 80px;
+  .ecommerce-ship-to {
+    display: inline-block;
+  }
+  h3 {
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 100%;
+  }
+  label {
+    width: 100%;
+    color: #333;
+    margin-bottom: 5px;
+    abbr{
+      color: #c00;
+    }
+  }
+  input, textarea {
+    border-color: #aaa;
+    width: 100%;
+    color: #888;
+  }
+  .ecommerce-billing-fields {
+    p {
+      float: left;
+      width: 100%;
+    }
+  }select {
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    background: transparent url("../../assets/images/arrow-select.png") no-repeat scroll 97% 49%;
+    border: 1px solid #aaa;
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 15px;
+    width: 100%;
+  }
+  .ecommerce-ship-to input {
+    width: auto;
+  }
+  .ecommerce-billing-fields {
+    margin-bottom: 30px;
+  }
+}
+#billing_first_name_field, #billing_last_name_field, #billing_email_field, #billing_phone_field, #billing_postcode_field, #billing_city_field {
+  width: 50%;
+}
+#billing_first_name_field, #billing_email_field, #billing_postcode_field {
+  padding-right: 15px;
+}
+ #billing_last_name_field, #billing_phone_field, #billing_city_field {
+  padding-left: 15px;
+}
+
+.div-shop-table {
+  border: 1px solid #aaa;
+  @include border_radius(3px);
+  width: 100%;
+  table {margin: 0;}
+  tbody tr .product-name {
+    color: #222;
+  }
+  tr {
+    td:last-child, th:last-child {
+      border-width: 0 0 1px 0;
+    }
+    th, td {
+      border-width: 0 1px 1px 0;
+      width:50%;
+      font-weight: 400;
+      width: 50%;
+    }
+  }
+  tfoot tr:last-child {
+    th {
+      border-width: 0 1px 0 0;
+    }
+    td {
+      border-width: 0 0 0 0;
+    }
+  }
+
+  thead th {
+    background-color: #f6f6f6;
+    color: #222;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 50px;
+    padding: 0 25px;
+  }
+}
+
+#payment {
+  margin-top: 30px;
+  .payment_methods{
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 30px;
+  }
+  .input-radio, label {
+    color: #222;
+    font-size: 16px;
+    width: auto;
+    margin-right: 10px;
+  }
+  p {
+    margin: 0;
+  }
+   form {
+    display: inline-block;
+    fieldset {
+      border: 1px solid #ddd;
+      display: inline-block;
+      padding: 0 5px 0 12px;
+      @include border_radius(3px);
+    }
+     legend {
+       display: inline-block;
+       margin: 0;
+       width: auto;
+     }
+     .paypal-list li {
+       display: inline-block;
+       float: left;
+       margin-right: 7px;
+       margin-bottom: 10px;
+     }
+  }
+  li.payment_method_paypal {
+    position: relative;
+    padding-left: 25px;
+    .input-radio {
+      position: absolute;
+      left: 0;
+      top: 45px;
+    }
+  }
+  .button-get-start {
+    font-size: 16px;
+    height: 48px;
+    line-height: 48px;
+    margin-top: 30px;
+  }
+}
+

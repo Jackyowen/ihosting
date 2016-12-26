@@ -1,0 +1,142 @@
+.everything {
+  background-color: $base-color-b;
+  padding: 60px 0 15px;
+  .title-top .title-shortcode, .title-top .title-shortcode span {
+    color: #fff;
+  }
+  .desc-shortcode {
+    color: #87a5c1;
+  }
+}
+
+// end everything footer
+
+.footer-top {
+  font-size: 14px;
+  line-height: 26px;
+  padding: 60px 0;
+}
+
+.contact-footer span, .we-accept-title {
+  color: #333;
+}
+
+.contact-footer {
+  display: inline-block;
+  margin-top: 25px;
+}
+
+.footer a {
+  color: #666;
+  &:hover {
+    color: $base-color-b;
+  }
+}
+
+.we-accept li {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.footer-list-title {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.footer-nav li {
+  margin-bottom: 5px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.footer-nav li::before {
+  color: $base-color-y;
+  content: "\f105";
+  font-family: "FontAwesome";
+  left: 3px;
+  position: absolute;
+  top: 0;
+}
+
+// end footer top
+.footer-mid {
+  background-color: #f6f6f6;
+  padding: 18px 0;
+}
+
+.footer-mid-left {
+  display: inline-block;
+  float: left;
+  margin-top: 12px;
+}
+
+.footer-icon {
+  display: inline-block;
+  float: right;
+}
+
+.footer-icon-iem {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.footer-icon-iem a {
+  color: #888;
+  display: inline-block;
+  font-size: 23px;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  text-align: center;
+  &:hover {
+    color: #fff;
+    background-color: $base-color-y;
+    border-radius: 50%;
+  }
+}
+
+.copyright {
+  line-height: 25px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.kt-social-footer-wrap {
+  .kt-social-footer {
+    display: inline-block;
+    float: right;
+    > li {
+      display: inline-block;
+      margin-left: 25px;
+      list-style: none;
+      a {
+        color: #888;
+        display: inline-block;
+        font-size: 23px;
+        line-height: 50px;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        &:hover {
+          background-color: $base-color-b;
+          color: #fff;
+          @include border_circle;
+        }
+      }
+    }
+  }
+}
+
+//end footer mid
+
+.footer-bottom {
+  background-image: url("../../assets/images/bg-footer-bottom.jpg");
+  color: #fff;
+  font-size: 23px;
+  padding: 30px 0;
+  text-align: center;
+}
+
+
+

@@ -1,0 +1,72 @@
+<wpml-config>
+
+    <custom-fields>
+        <custom-field action="translate">_ihosting_footer_bottom_text</custom-field>
+    </custom-fields>
+    
+    <admin-texts>
+        <key name="ihosting">
+            <key name="opt_typography_body_font" />
+            <key name="opt_typography_menu_font" />
+            <key name="opt_typography_h1_font" />
+            <key name="opt_typography_h2_font" />
+            <key name="opt_typography_h3_font" />
+            <key name="opt_typography_h4_font" />
+            <key name="opt_typography_h5_font" />
+            <key name="opt_typography_h6_font" />
+            <key name="opt_widget_title_font" />
+            <key name="opt_footer_copyright_text" />
+            <key name="opt_blog_masonry_loadmore_text" />
+            <key name="opt_blog_masonry_nomore_text" />
+            <key name="opt_blog_continue_reading" />
+            <key name="woo_product_cats_show_on_archive" />
+            <key name="opt_subscribe_form_title" />
+            <key name="opt_subscribe_form_input_placeholder" />
+            <key name="opt_subscribe_form_submit_text" />
+            <key name="opt_subscribe_success_message" />
+            <key name="opt_coming_soon_site_title" />
+            <key name="opt_coming_soon_img" />
+            <key name="opt_coming_soon_text" />
+            <key name="opt_404_header_title" />
+            <key name="opt_404_img" />
+            <key name="opt_404_text" />
+        </key> 
+    </admin-texts>
+    
+    <language-switcher-settings>
+        <key name="icl_lang_sel_config">
+            <key name="font-current-normal">#444444</key>
+            <key name="font-current-hover">#000000</key>
+            <key name="background-current-normal">#ffffff</key>
+            <key name="background-current-hover">#eeeeee</key>
+            <key name="font-other-normal">#444444</key>
+            <key name="font-other-hover">#000000</key>
+            <key name="background-other-normal">#ffffff</key>
+            <key name="background-other-hover">#eeeeee</key>
+            <key name="border">#cdcdcd</key>
+        </key>
+        <key name="icl_lang_sel_footer_config">
+            <key name="font-current-normal">#444444</key>
+            <key name="font-current-hover">#000000</key>
+            <key name="background-current-normal">#ffffff</key>
+            <key name="background-current-hover">#eeeeee</key>
+            <key name="font-other-normal">#444444</key>
+            <key name="font-other-hover">#000000</key>
+            <key name="background-other-normal">#ffffff</key>
+            <key name="background-other-hover">#eeeeee</key>
+            <key name="border">#cdcdcd</key>
+        </key>
+        <key name="icl_language_switcher_sidebar">0</key>
+        <key name="icl_widget_title_show">0</key>
+        <key name="icl_lang_sel_type">dropdown</key>
+        <key name="icl_lso_link_empty">0</key>
+        <key name="icl_lso_flags">0</key>
+        <key name="icl_lso_native_lang">1</key>
+        <key name="icl_lso_display_lang">1</key>
+        <key name="icl_lang_sel_footer">0</key>
+        <key name="icl_post_availability">0</key>
+        <key name="icl_post_availability_position">below</key>
+        <key name="icl_post_availability_text">This post is also available in: %s</key>
+    </language-switcher-settings>
+
+</wpml-config>

@@ -1,0 +1,7 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#/">Home</a></li>
+    <li class="breadcrumb-item" ng-class="{{breadcrumb.active}}" ng-repeat="breadcrumb in breadcrumbs">
+    	<a ng-show="!breadcrumb.active" href="#{{breadcrumb.url}}">{{breadcrumb.title}}</a>
+    	<span ng-show="breadcrumb.active" >{{breadcrumb.title}}</span>
+    </li>
+</ol>

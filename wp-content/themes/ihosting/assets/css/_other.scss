@@ -1,0 +1,62 @@
+/* Back to top */
+.back-to-top {
+  bottom: 30px;
+  color: #9e9e9e;
+  font-size: 10px;
+  height: 40px;
+  letter-spacing: 2px;
+  position: fixed;
+  right: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 50px;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  i {
+    animation-duration: 1.2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-name: backtotop;
+    display: inline-block;
+    font-size: 15px;
+    width: 100%;
+  }
+  &.lk-show {
+    visibility: visible;
+    opacity: 1;
+  }
+  &:hover {
+    color: #5cafff;
+  }
+}
+
+@include backtotop;
+
+/* Navigation */
+.navigation {
+  > ul {
+    > li {
+      display: inline-block;
+      border: 1px solid #ddd;
+      margin-right: 5px;
+      min-width: 41px;
+      text-align: center;
+      > a {
+        padding: 7px;
+        color: #666;
+        display: block;
+      }
+      > span {
+        padding: 7px;
+        display: block;
+      }
+      .current {
+        font-weight: bold;
+      }
+      &:hover, &.active {
+        background-color: #eee;
+      }
+    }
+  }
+}

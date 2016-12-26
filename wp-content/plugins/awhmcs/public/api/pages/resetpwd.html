@@ -1,0 +1,33 @@
+<div class="row forgot-container">
+	<form class="forgotbox" name="forgot" ng-submit="submit()">
+		<h2>Forgot Password</h2>
+		<div ng-show="error">
+			<div class="alert alert-danger text-center">
+			    {{error}}
+			</div>			
+		</div>		
+		
+		<div ng-show="!status">
+			<p>Please enter your desired new password below.</p>
+			<md-input-container class="md-block">
+				<label>Password</label>
+				<md-icon md-font-icon="fa fa-lock"></md-icon>
+				<input type="password" required="" name="newpw" ng-model="password1">
+			</md-input-container>
+			<md-input-container class="md-block">
+				<label>Confirm Password</label>
+				<md-icon md-font-icon="fa fa-lock"></md-icon>						
+				<input type="password" required="" name="password2" ng-model="password2">
+			</md-input-container>	
+			<div class="action-box">
+				<md-button type="submit" class="md-raised md-primary submit">Submit</md-button>					
+			</div>
+		</div>
+		<div ng-show="status">
+			<div class="alert alert-success text-center">
+			    Password Reset Successful
+			</div>			
+			<p>Your password has now been reset. <a href="#/client">Click here</a> to continue to the client area...</p>
+		</div>		
+	</form>
+</div>

@@ -1,0 +1,132 @@
+<section id="main-body">
+
+    <div class="row">
+
+       	<!-- Container for main page display content -->
+
+			<div id="order-standard_cart">
+
+        			<div class="col-md-3 pull-md-left sidebar" layout="column" ng-include="project.left"></div>
+
+					<div class="col-md-9 pull-md-right">
+
+						<div class="header-lined">
+
+			                <breadcrumbs breadcrumbs="breadcrumbs"></breadcrumbs>
+
+			    		    <div class="header-title">
+
+			                    <h1>Domain Renewals</h1>
+
+			                    
+
+			                </div>
+
+			    		</div>
+
+					
+
+		            <p>Secure your domain(s) by adding more years to them. Choose how many years you want to renew for and then submit to continue.</p>
+
+					<form method="post">
+
+						<input type="hidden" name="token" value="7fe87a5318cb085ad39ad76ba6bb6bfde53a8097">
+
+						
+
+						
+
+			                <table class="table responsive-table table-list">
+
+			                    <thead>
+
+			                        <tr>
+
+			                            <th>Domain</th>
+
+			                            <th>Status</th>
+
+			                            <th>Days Until Expiry</th>
+
+			                            <th></th>
+
+			                        </tr>
+
+			                    </thead>
+
+			                    <tbody>
+
+		                        	<tr ng-repeat="domain in domains">
+
+		                                <td data-label="Domain">
+
+		                                    {{domain.domain}}
+
+		                                </td>
+
+		                                <td data-label="Status">
+
+		                                    {{domain.status}}
+
+		                                </td>
+
+		                                <td data-label="Days Until Expiry">
+
+		                                    <span class="textblack">{{ - domain.daysuntilexpiry | number }} Days Ago</span><br>
+
+		                                    <span ng-show="domain.ingraceperiod" class="textred">
+
+		                                        Last Chance to Renew!
+
+		                                    </span>                                                                    
+
+		                                </td>
+
+		                                <td data-label="">
+
+		                                	<select  ng-show="domain.ingraceperiod" name="renewalperiod[28]">
+
+		                                    	<option ng-repeat="price in domain.renewaloptions" value="{{price.period}}">{{price.period}} Year/s @ {{price.price}}</option>
+
+		                                    </select>
+
+		                                    <p ng-show="!domain.ingraceperiod">Past Renewable Period</p>
+
+		                                 </td>
+
+		                            </tr>
+                                    <tr ng-show="!domains.length"><td valign="top" colspan="5" class="dataTables_empty">No Records Found</td></tr>
+		                            
+								</tbody>
+
+							</table>
+
+						
+
+						
+
+		                <p ng-if="domains.length" class="text-center">
+
+		                    <button type="submit" class="btn btn-success">
+
+		                        <i class="fa fa-shopping-cart"></i>
+
+		                        Order Now
+
+		                    </button>
+
+		                </p>
+
+	
+
+					</form>
+
+				</div>
+
+			</div>
+
+	</div><!-- /.main-content -->
+
+	<div class="clearfix"></div>
+
+</section>

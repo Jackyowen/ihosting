@@ -1,0 +1,75 @@
+.blog-text-content blockquote {
+  color: #333;
+  font-size: 18px;
+  padding: 20px 100px;
+  text-align: right;
+  span {
+    color: #bbb;
+    display: inline-block;
+    font-family: "Georgia";
+    font-size: 48px;
+    @include  transform_translateY(15px);
+  }
+}
+.comment-blog-title {
+  margin-bottom: 35px;
+  span {
+    color: #888;
+    font-size: 20px;
+  }
+}
+.blog-right-top {
+  margin-bottom: 10px;
+  .comment-name {
+    color: #333;
+    font-size: 18px;
+    margin-right: 20px;
+  }
+  .comment-date {
+    color: #888;
+    font-size: 14px;
+  }
+  .comment-reply {
+    color: #666;
+    float: right;
+  }
+}
+.comment-blog-list {
+  margin-bottom: 50px;
+  .comment-text {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin: 0;
+    padding: 28px 28px 65px;
+  }
+  .comment-blog-item {
+    margin-bottom: 40px;
+  }
+  .comment-children {
+    margin: 40px 0 60px 60px;
+  }
+}
+.form {
+  label {
+    color: #333;
+    margin-top: 5px;
+  }
+  span {
+    color: #e43e43;
+  }
+  .form-blog-name-email {
+    padding-right: 100px;
+  }
+  input, textarea {
+    border: 1px solid #aaa;
+    @include border_radius(3px);
+    line-height: 38px;
+    padding: 0 15px;
+    width: 100%;
+  }
+  .button-get-start {
+    line-height: 48px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+}

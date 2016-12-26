@@ -1,0 +1,101 @@
+<div class="client">
+	<div class="col-md-12 user">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-3 image"><i class="fa fa-user-secret" aria-hidden="true"></i></div>
+			<div class="col-xs-12 col-sm-12 col-md-9 info">
+				<div class="name">{{project.client.fullname}}</div>
+				<div class="email">{{project.client.email}}</div>
+			</div>
+		</div>
+	</div>
+	<div class="menu-client">
+		<h3>MAIN MENU</h3>
+		<ul>
+			<li><a href="#/client" ng-class="{ acti: isCurrentPath('/client') }"><i class="fa fa-home" aria-hidden="true"></i>Dashboard</a></li>
+			<li ng-class="{ curren: isCurrentMenu('/myinvoices') || isCurrentMenu('/myquotes') || isCurrentMenu('/masspay') }">
+				<a class="has-child"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>Billing</a>
+				<ul>
+					<li><a ng-class="{ acti: isCurrentPath('/myinvoices') }" href="#/myinvoices" class="ng-binding">My Invoices</a></li>
+					<li><a ng-class="{ acti: isCurrentPath('/myquotes') }" href="#/myquotes" class="ng-binding">My Quotes</a></li>
+					<li><a ng-class="{ acti: isCurrentPath('/masspay') }" href="#/masspay" class="ng-binding">Mass Payment</a></li>
+				</ul>
+			</li>
+			<li ng-class="{ curren: isCurrentMenu('/services') || isCurrentMenu('/products') || isCurrentMenu('/viewavailableaddons') }">
+				<a class="has-child"><i class="fa fa-cubes" aria-hidden="true"></i>Services</a>
+				<ul>
+					<li><a ng-class="{ acti: isCurrentPath('/services') }" href="#/services" class="ng-binding">My Serives</a></li>
+					<li><a ng-class="{ acti: isCurrentPath('/products') }" href="#/products" class="ng-binding">Order New Services</a></li>
+					<!-- <li><a ng-class="{ acti: isCurrentPath('/viewavailableaddons') }" href="#/viewavailableaddons" class="ng-binding">View Available Addons</a></li> -->
+				</ul>
+			</li>
+			<li ng-class="{ curren: isCurrentMenu('/domains') || isCurrentMenu('/renewdomains') || isCurrentMenu('/transferdomain') || isCurrentMenu('/domainchecker') }">
+				<a class="has-child"><i class="fa fa-connectdevelop" aria-hidden="true"></i>Domains</a>
+				<ul>
+					<li><a ng-class="{ acti: isCurrentPath('/domains') }" href="#/domains" class="ng-binding">My Domains</a></li>
+					<li><a ng-class="{ acti: isCurrentPath('/renewdomains') }" href="#/renewdomains" class="ng-binding">Renew Domains</a></li>
+					<li><a ng-class="{ acti: isCurrentPath('/transferdomain') }" href="#/transferdomain" class="ng-binding">Transfer domain to Us</a></li>
+					<li><a ng-class="{ acti: isCurrentPath('/domainchecker') }" href="#/domainchecker" class="ng-binding">Domain Search</a></li>
+				</ul>
+			</li>
+			<li ng-class="{ curren: isCurrentMenu('/tickets') || isCurrentMenu('/knowledgebase') || isCurrentMenu('/downloads') || isCurrentMenu('/networkstatus') }">
+				<a class="has-child"><i class="fa fa-ticket" aria-hidden="true"></i>Support</a>
+				<ul>
+					<li><a ng-class="{ acti: isCurrentPath('/tickets') }" href="#/tickets" class="ng-binding">Tickets</a></li>
+					<li><a ng-class="{ acti: isCurrentPath('/knowledgebase') }" href="#/knowledgebase" class="ng-binding">Knowledgebase</a></li>
+					<li><a ng-class="{ acti: isCurrentPath('/downloads') }" href="#/downloads" class="ng-binding">Downloads</a></li>
+					<li><a ng-class="{ acti: isCurrentPath('/networkstatus') }" href="#/networkstatus" class="ng-binding">Network Status</a></li>
+				</ul>
+			</li>
+			<li class="logout">
+				<a href="#logout"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+			</li>
+		</ul>
+	</div>
+	<div class="panel panel-default hidden">		    
+		<div class="panel-heading">
+			<h3 class="panel-title">
+		   		<i class="fa fa-user"></i>&nbsp;My Account
+			</h3>
+		</div>
+		<div class="list-group">
+			<a href="#/update" class="list-group-item">My Details</a> 
+			<a class="list-group-item">Contacts</a> 
+			<a class="list-group-item">Change password</a> 
+		</div>
+		
+	<!--
+		<div class="panel-footer clearfix">
+			<a href="#/update" class="btn btn-success btn-sm btn-block">
+				<i class="fa fa-pencil"></i> Update
+			</a>
+	    </div>
+	-->		    							
+	</div>
+	<div class="panel panel-default panel-actions hidden">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				<i class="fa fa-folder-o"></i>&nbsp;Contacts
+			</h3>
+	    </div>
+	    <div class="list-group">
+		    <span ng-show="!contacts">No Contacts Found </span>
+			<a class="list-group-item" href="#/contacts/action/{{contact.id}}" ng-repeat="contact in contacts">
+	        {{contact.firstname}} {{contact.lastname}}
+			</a>			    
+	    </div>	
+		<div class="panel-footer clearfix">
+			<a href="#/contacts/action/new" class="btn btn-default btn-sm btn-block">
+				<i class="fa fa-plus"></i> New Contact
+			</a>
+		</div>		    				
+	</div>
+
+</div>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$('.sidebar .client ul li a.has-child').click(function(){
+			$(this).toggleClass('active');
+			$(this).next().stop().slideToggle();
+		});
+	});
+</script>

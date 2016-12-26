@@ -1,0 +1,18 @@
+#whmcsheader {
+	display:none;
+}
+.footerdivider {
+	width: 90%;
+}
+#order-ajaxcart table.ajaxcart {
+}
+
+/* Adjustments for Twenty Ten theme */
+#bridge .topbar .fill { 
+	width: 95%; 
+}
+.one-column #content {
+	width: 100%;
+}
+/*End of adjustments*/
+

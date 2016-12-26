@@ -1,0 +1,79 @@
+<section id="main-body">
+	 <div class="row update-detail">
+	    <div class="col-md-3 pull-md-left sidebar" layout="column" ng-include="project.left"></div>
+	    <div class="col-md-9 pull-md-right main-content">
+	    	<div class="header-lined">
+                <breadcrumbs breadcrumbs="breadcrumbs"></breadcrumbs>
+                <div class="header-title">
+                    <h1>My Details</h1>
+                </div>
+            </div> 
+            <div ng-show="click" class="alert alert-success">
+			    <a class="close " ng-click="close()" data-dismiss="alert" aria-label="close" title="close">×</a>
+			    {{success}}
+			</div>
+ 			<form name="update">
+				<div class="row">
+					<div class="col-md-6">
+				      <md-input-container class="md-block">
+				        <label>First Name</label>
+				        <input type="text" required="" name="firstname" ng-model="client.firstname">
+				      </md-input-container>	
+				      <md-input-container class="md-block">
+				        <label>Email Address</label>
+				        <input type="text" required="" name="email" ng-model="client.email" disabled>
+				      </md-input-container>	  
+				      <md-input-container class="md-block">
+				        <label>Conpany Name</label>
+				        <input type="text" required="" name="companyname" ng-model="client.companyname">
+				      </md-input-container>	 
+				      <md-input-container class="md-block">
+					        <label>Address 2</label>
+					        <input type="text" name="address2" ng-model="client.address2">
+						</md-input-container>			
+				      	<md-input-container class="md-block">
+					        <label>Postcode</label>
+					        <input type="text" required="" name="postcode" ng-model="client.postcode">
+						</md-input-container>	
+						<md-input-container>
+					        <label>Country</label>
+					        <md-select ng-change="test()" ng-model="client.countrycode">
+					          <md-option ng-repeat="country in countries"  value="{{country.code}}">
+					            {{country.name}}
+					          </md-option>
+					        </md-select>
+						</md-input-container>	
+					</div>
+					<div class="col-md-6">
+						<md-input-container class="md-block">
+					        <label>Last Name</label>
+					        <input type="text" required="" name="lastname" ng-model="client.lastname">
+						</md-input-container>	
+						<md-input-container class="md-block">
+					        <label>Phone Number</label>
+					        <input type="text" required="" name="phonenumber" ng-model="client.phonenumber">
+						</md-input-container>
+						<md-input-container class="md-block">
+					        <label>Address 1</label>
+					        <input type="text" required="" name="address1" ng-model="client.address1">
+					      </md-input-container>	
+						<md-input-container class="md-block">
+					        <label>City</label>
+					        <input type="text" required="" name="city" ng-model="client.city">
+						</md-input-container>	
+						<md-input-container class="md-block">
+					        <label>State/Region</label>
+					        <input type="text" required="" name="countrycode" ng-model="client.state">
+						</md-input-container>	 
+							
+					</div>						
+				</div>
+				<div class="text-center">
+				    <md-action>
+				    	<md-button ng-disabled="!update.$valid" type="submit" ng-click="updateClient()" class="md-raised md-primary"><i ng-show="loading" class="fa fa-spinner fa-spin fa-fw ng-hide" aria-hidden="true"></i>Save change</md-button>
+				    </md-action>				
+				</div>
+			</form>
+	    </div>
+	</div>
+</section>
